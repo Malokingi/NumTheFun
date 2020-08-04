@@ -79,14 +79,16 @@
    79  history
    80  history > Documents/CodingStudy/gitbashHistory/20200804.txt
    81  exit
-   82  ls
-   83  mvn verify
+   82  history
+   83  git commit "first commit"
    84  cd proj-0/
-   85  mvn verify
-   86  VS Code settings
-   87  mvn verify
-   88  mvn compile
-   89  git init
-   90  mvn package
-   91  mkdir bashHist
-   92  history > bashHist/200804.txt
+   85  git commit "first commit"
+   86  git commit -m "first commit"
+   87  git status
+   88  git add .
+   89  git status
+   90  git push
+   91  git pull
+   92  git push
+   93  history
+   94  history > bashHist/200804.txt 
