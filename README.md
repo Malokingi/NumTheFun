@@ -1,5 +1,5 @@
 # prog-0-mwg
-# Target tech stack = {
+Target tech stack = {
   Java 8:
     File I/O
     Collections API
