@@ -13,14 +13,14 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [ ] Manage (Clean, Compile, etc.)
 - [ ] JUnit 5 (executed via Maven?)
   - [ ] Testing
-- [ ] Git
+- [X] Git
   - [X] Init
   - [X] General Version control (commit, push, etc.)
 - [ ] PostgreSQL 9+
   - [ ] Get and/or set DB Info (probably)
 
 ## Features
-- [ ] Top Menu
+- [X] Top Menu
 - [ ] Chapter 1
   - [ ] Theorem 1-1 = Sum of the first N Integers.
     - [ ] Educational Dialogue
