@@ -1,13 +1,7 @@
 package com.matthewsgrand;
 
 public final class TempFakeDatabase {
-    public TempFakeDatabase() {
-        initAllDialogues();
-    }
-
-    private void initAllDialogues() {
-        
-    }
+    public TempFakeDatabase() { }
 
     private final String[] intros = {
         "Hello. You've reached Matthew's Grand Number Theory FUNdamentals Program!!\n\nWe're going to have some fun.\n",
@@ -27,33 +21,15 @@ public final class TempFakeDatabase {
     public String getIntroDialogue(final String whichOne) {
         String returnValue;
         switch (whichOne) {
-            case "Main":
-                returnValue = intros[0];
-                break;
-            case "11Intro":
-                returnValue = intros[1];
-                break;
-            case "12Intro":
-                returnValue = intros[2];
-                break;
-            case "13Intro":
-                returnValue = intros[3];
-                break;
-            case "21Intro":
-                returnValue = intros[4];
-                break;
-            case "22Intro":
-                returnValue = intros[5];
-                break;
-            case "23Intro":
-                returnValue = intros[6];
-                break;
-            case "24Intro":
-                returnValue = intros[7];
-                break;
-            case "25Intro":
-                returnValue = intros[8];
-                break;
+            case "Main": returnValue = intros[0]; break;
+            case "11Intro": returnValue = intros[1]; break;
+            case "12Intro": returnValue = intros[2]; break;
+            case "13Intro": returnValue = intros[3]; break;
+            case "21Intro": returnValue = intros[4]; break;
+            case "22Intro": returnValue = intros[5]; break;
+            case "23Intro": returnValue = intros[6]; break;
+            case "24Intro": returnValue = intros[7]; break;
+            case "25Intro": returnValue = intros[8]; break;
             default:
                 returnValue = "Sorry, " + whichOne + " isn't a valid Intro Dialogue option.";
                 break;
