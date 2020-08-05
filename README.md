@@ -1,7 +1,7 @@
 # prog-0-NumTheFun
 Number Theory Fun
-Learn about and scruitnize a few basic Number Theory concepts up to and including The Fundamental Theorem or Arethmetic!
-## Target tech stack =
+Learn about and scruitnize a few basic Number Theory concepts up to and including The Fundamental Theorem or Arithmetic!
+## Target tech stack
 - [ ] Java 8
   - [ ] File I/O
     - [ ] Takes User Input (from CL, for example)
@@ -30,7 +30,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [ ] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
-  - [ ] Theorem 1-3 = Fake Fundamental Theorem of Arethmetic.
+  - [ ] Theorem 1-3 = Fake Fundamental Theorem of Arithmetic.
     - [ ] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
@@ -51,7 +51,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [ ] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
-  - [ ] Theorem 2-5 = True Fundamental Theorem of Arethmetic.
+  - [ ] Theorem 2-5 = True Fundamental Theorem of Arithmetic.
     - [ ] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
