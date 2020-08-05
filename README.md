@@ -59,3 +59,4 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [ ] Add Proofs
   - [ ] Define more terms
   - [ ] Account for Integer Limitations
+  - [ ] Improve the pace of the output (wait())
