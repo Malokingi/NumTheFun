@@ -79,16 +79,34 @@
    79  history
    80  history > Documents/CodingStudy/gitbashHistory/20200804.txt
    81  exit
-   82  history
-   83  git commit "first commit"
-   84  cd proj-0/
-   85  git commit "first commit"
-   86  git commit -m "first commit"
-   87  git status
-   88  git add .
-   89  git status
-   90  git push
-   91  git pull
-   92  git push
-   93  history
-   94  history > bashHist/200804.txt 
+   82   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+   83  exit
+   84   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+   85  history
+   86  history > Documents/CodingStudy/gitbashHistory/200804.txt
+   87  history > proj-0/bashHist/200804.txt 
+   88  exit
+   89  history
+   90  git commit "first commit"
+   91  cd proj-0/
+   92  git commit "first commit"
+   93  git commit -m "first commit"
+   94  git status
+   95  git add .
+   96  git status
+   97  git push
+   98  git pull
+   99  git push
+  100  history
+  101  history > bashHist/200804.txt 
+  102  exit
+  103  git status
+  104  cd proj-0/
+  105  git status
+  106  git add .
+  107  git status
+  108  git push 
+  109  git remote -v
+  110  git commit
+  111  git push 
+  112  history > bashHist/200804.txt 
