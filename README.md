@@ -22,10 +22,10 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 ## Features
 - [X] Top Menu
 - [ ] Chapter 1
-  - [ ] Theorem 1-1 = Sum of the first N Integers.
-    - [ ] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
+  - [x] Theorem 1-1 = Sum of the first N Integers.
+    - [x] Educational Dialogue
+    - [x] User Test Loop
+    - [x] Non-User Version
   - [ ] Theorem 1-2 = Sum of x^j for j = [0, n-1].
     - [ ] Educational Dialogue
     - [ ] User Test Loop
@@ -55,3 +55,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [ ] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
+- [ ] Bonus Content // If I get done with everything with enough time to spare. 
+  - [ ] Add Proofs
+  - [ ] Define more terms
+  - [ ] Account for Integer Limitations
