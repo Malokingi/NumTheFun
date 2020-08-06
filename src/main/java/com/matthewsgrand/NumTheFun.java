@@ -50,7 +50,8 @@ public final class NumTheFun {
 
             switch (userInput) {
                 case "1":
-                    System.out.print(fakeDB.getEduDialogue(the + "Edu"));
+                    System.out.println(fakeDB.getEduDialogue(the + "Edu"));
+                    System.out.println();
                     break;
                 case "2":
                     switch (the) {
@@ -93,9 +94,9 @@ public final class NumTheFun {
     private static int the11(final int theInput, final boolean slow) {
         final int returnValue = ((theInput * (theInput + 1)) / 2);
         if (slow) {
-            System.out.print("\nIf you have enough free time, you can add: ");
-            if (theInput > 50){
-                for(int i = 1; i <= 50 - 1; i++) System.out.print(i + " + ");
+            System.out.println("\nIf you have enough free time, you can add:");
+            if (theInput > 10){
+                for(int i = 1; i <= 10 - 1; i++) System.out.print(i + " + ");
                 System.out.printf("... + ");
             }else{
                 for(int i = 1; i <= theInput - 1; i++) System.out.print(i + " + ");

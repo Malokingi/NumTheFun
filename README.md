@@ -1,6 +1,6 @@
-# prog-0-NumTheFun
-### Number Theory Fun
+# Number Theory Fun
 Learn about and scruitnize a few basic Number Theory concepts up to and including The Fundamental Theorem of Arithmetic!
+
 ## Target tech stack
 - [ ] Java 8
   - [ ] File I/O

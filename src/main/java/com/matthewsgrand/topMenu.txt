@@ -3,12 +3,12 @@ What do you want to do?
 
     (11): Theorem 1-1 = Sum of the first N Integers.
     (12): Theorem 1-2 = Sum of x^j for j = [0, n-1].
-    (13): Theorem 1-3 = Fake Fundamental Theorem of Arethmetic.
+    (13): Theorem 1-3 = Basis Represenataion Theorem.
 
     (21): Theorem 2-1 = Euclid's Division Lemma.
     (22): Theorem 2-2 = Greatest Common Divisor.
     (23): Theorem 2-3 = If gcd(a, c) = 1 and c|ab, then c|b.
     (24): Theorem 2-4 = Linear Diophantine Equation.
-    (25): Theorem 2-5 = True Fundamental Theorem of Arethmetic.
+    (25): Theorem 2-5 = Fundamental Theorem of Arithmetic.
 
 Well, put in some input: 

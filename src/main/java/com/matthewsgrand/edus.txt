@@ -4,7 +4,7 @@ For a given Natural Number, n, adding all consecutive Integers starting from 1, 
 
     (n x (n + 1)) / 2
 
-
+@fakeDb Style
 \nTheorem 1-1 is a simple theorem which observes the following:\n\nFor a given Natural Number, n, adding all consecutive Integers starting from 1, or technically you can say \"starting from 0\" and it would be the same, up to and including n is equal to:\n\n\t(n x (n + 1)) / 2\n\n
 
 Theorem 1-2 states:
@@ -13,5 +13,77 @@ For any real number, x, where x != 1, and a given Natural Number, n, then:
 
     (x ^ 0) + (x ^ 1) + (x ^ 2) + ... + (x ^ (n - 1)) = ((x ^ n) - 1) / (x - 1)
 
+@fakeDb Style
 \nTheorem 1-2 states:\n\nFor any real number, x, where x != 1, and a given Natural Number, n, then:\n\n\t(x ^ 0) + (x ^ 1) + (x ^ 2) + ... + (x ^ (n - 1)) = ((x ^ n) - 1) / (x - 1)
 
+Theorem 1-3 kinda looks like a first draft of The Fundamental Theorem of Arithmetic with hints of Euclid's Division Lemma sprinkled about:
+
+For a given Natural Numbers, k and n, there exists:
+
+    n = a[0]k^(s) + a[1]k^(s - 1) + ... + a[s]k^(0)
+
+where a[0] != 0 and 0 <= a[i] < k. Also, this represenataion of n is unique in relation to k. This is referred to as "The representation of n to base k".
+
+@fakeDb Style
+\nTheorem 1-3 kinda looks like a first draft of The Fundamental Theorem of Arithmetic with hints of Euclid's Division Lemma sprinkled about:\n\nFor a given Natural Numbers, k and n, there exists:\n\n\tn = a[0]k^(s) + a[1]k^(s - 1) + ... + a[s]k^(0)\n\nwhere a[0] != 0 and 0 <= a[i] < k. Also, this represenataion of n is unique in relation to k. This is referred to as \"The representation of n to base k\".
+
+Theorem 2-1 Euclid's Division Lemma states:
+
+For a given Natural Number, k and Integer, j, there exists a pair of Integers, q and r, such that:
+
+    j = qk + r
+
+ Also, 0 <= r < k and the pair (q, r) is unique.
+
+
+@fakeDb Style
+\nTheorem 2-1 Euclid's Division Lemma states:\n\nFor a given Natural Number, k and Integer, j, there exists a pair of Integers, q and r, such that:\n\n\tj = qk + r\n\nAlso, 0 <= r < k and the pair (q, r) is unique.
+
+Before getting to the theorem part, I'll explain what a Greatest Common Divisor is:
+
+For given Integers, a and b, where a and b are not both 0, an Integer, d, is called the Greatest Common Divisor, or gcd, of a and b if:
+
+    i. d > 0
+    ii. d is a Common Divisor of a and b
+    iii. all other Integers that are divisors of a and b are also divisors of d
+
+Theorem 2-2 states:
+
+For given Integers, a and b, where a and b are not both 0, then gcd(a, b) exists and is unique.
+
+@fakeDb Style
+\nBefore getting to the theorem part, I'll explain what a Greatest Common Divisor is:\n\nFor given Integers, a and b, where a and b are not both 0, an Integer, d, is called the Greatest Common Divisor, or gcd, of a and b if:\n\n\ti. d > 0\n\n\tii. d is a Common Divisor of a and b\n\n\tiii. all other Integers that are divisors of a and b are also divisors of d\n\nTheorem 2-2 states:\n\nFor given Integers, a and b, where a and b are not both 0, then gcd(a, b) exists and is unique.
+
+Theorem 2-3 states:
+
+For given Integers, a, b, and c, if gcd(a, c) = 1 and c|ab, then c|b.
+
+@fakeDb Style
+/nTheorem 2-3 states:/n/nFor given Integers, a, b, and c, if gcd(a, c) = 1 and c|ab, then c|b.
+
+Theorem 2-4 The Linear Diophantine Equation states:
+
+For Given Integers, a, b, and c:
+
+    ax + by = c
+
+has a solution if, and only if, for when gcd(a, b) = d, d|c.
+
+Furthermore, if (x[0], y[0]) is a solution of this equation, then the set of solutions of this equation consists of all Integer pairs, (x[i], y[i]) where, for any Integer, t:
+
+    x[i] = x[0] + t(b/d)
+    y[i] = y[0] + t(a/d)
+
+@fakeDb Style
+\nTheorem 2-4 The Linear Diophantine Equation states:\n\nFor Given Integers, a, b, and c:\n\n\tax + by = c\n\nhas a solution if, and only if, for when gcd(a, b) = d, d|c.\n\nFurthermore, if (x[0], y[0]) is a solution of this equation, then the set of solutions of this equation consists of all Integer pairs, (x[i], y[i]) where, for any Integer, t:\n\n\tx[i] = x[0] + t(b/d)\n\ty[i] = y[0] + t(a/d)
+
+Theorem 2-5 The Fundamental Theorem of Arithmetic states:
+
+For Each Natural Number, n, there exists an array of Prime Numbers, p, where p[1] <= p[2] <= ... <= p[r] such that:
+
+    n = p[1]p[2]...p[r]
+
+This factorization is unique.
+
+@fakeDb Style
+\nTheorem 2-5 The Fundamental Theorem of Arithmetic states:\n\nFor Each Natural Number, n, there exists an array of Prime Numbers, p, where p[1] <= p[2] <= ... <= p[r] such that:\n\n\tn = p[1]p[2]...p[r]\n\nThis factorization is unique.
