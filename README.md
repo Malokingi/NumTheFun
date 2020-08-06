@@ -27,32 +27,32 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] User Test Loop
     - [x] Non-User Version
   - [ ] Theorem 1-2 = Sum of x^j for j = [0, n-1].
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
   - [ ] Theorem 1-3 = Fake Fundamental Theorem of Arithmetic.
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
 - [ ] Chapter 2
   - [ ] Theorem 2-1 = Euclid's Division Lemma.
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
   - [ ] Theorem 2-2 = Greatest Common Divisor.
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
   - [ ] Theorem 2-3 = If gcd(a, c) = 1 and c|ab, then c|b.
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
   - [ ] Theorem 2-4 = Linear Diophantine Equation.
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
   - [ ] Theorem 2-5 = True Fundamental Theorem of Arithmetic.
-    - [ ] Educational Dialogue
+    - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
 - [ ] Bonus Content // If I get done with everything with enough time to spare. 
