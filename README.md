@@ -4,23 +4,23 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 ## Target tech stack
 - [ ] Java 8
   - [ ] File I/O
-    - [ ] Takes User Input (from CL, for example)
+    - [x] Takes User Input (from CL, for example)
     - [ ] Takes File Input
   - [ ] Collections API
   - [ ] Concurrency
 - [ ] Maven 3
-  - [X] Setup
+  - [x] Setup
   - [ ] Manage (Clean, Compile, etc.)
 - [ ] JUnit 5 (executed via Maven?)
   - [ ] Testing
-- [X] Git
-  - [X] Init
-  - [X] General Version control (commit, push, etc.)
+- [x] Git
+  - [x] Init
+  - [x] General Version control (commit, push, etc.)
 - [ ] PostgreSQL 9+
   - [ ] Get and/or set DB Info (probably)
 
 ## Features
-- [X] Top Menu
+- [x] Top Menu
 - [ ] Chapter 1
   - [x] Theorem 1-1 = Sum of the first N Integers.
     - [x] Educational Dialogue

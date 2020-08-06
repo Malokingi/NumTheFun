@@ -6,3 +6,12 @@ For a given Natural Number, n, adding all consecutive Integers starting from 1, 
 
 
 \nTheorem 1-1 is a simple theorem which observes the following:\n\nFor a given Natural Number, n, adding all consecutive Integers starting from 1, or technically you can say \"starting from 0\" and it would be the same, up to and including n is equal to:\n\n\t(n x (n + 1)) / 2\n\n
+
+Theorem 1-2 states:
+
+For any real number, x, where x != 1, and a given Natural Number, n, then:
+
+    (x ^ 0) + (x ^ 1) + (x ^ 2) + ... + (x ^ (n - 1)) = ((x ^ n) - 1) / (x - 1)
+
+\nTheorem 1-2 states:\n\nFor any real number, x, where x != 1, and a given Natural Number, n, then:\n\n\t(x ^ 0) + (x ^ 1) + (x ^ 2) + ... + (x ^ (n - 1)) = ((x ^ n) - 1) / (x - 1)
+
