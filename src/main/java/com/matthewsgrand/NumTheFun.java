@@ -9,6 +9,12 @@ public final class NumTheFun {
     final static TempFakeDatabase fakeDB = new TempFakeDatabase();
     final static Scanner scan = new Scanner(System.in);
 
+    private static int pow(int a, int b){ // a power function that doesn't need Doubles
+        int r = 1;
+        for (int i = 0; i < b; i++) r *= a;
+        return r;
+    }
+
     public static void main(final String[] args) {
         boolean loop = true;
         String userInput;
@@ -55,7 +61,8 @@ public final class NumTheFun {
                     break;
                 case "2":
                     switch (the) {
-                        case "11": start11(); break;
+                        case "11": learn11(); break;
+                        case "12": learn12(); break;
                         default:
                             System.err.println("Sorry, " + the + " is either yet to be implimented or invalid.");
                             break;
@@ -71,17 +78,17 @@ public final class NumTheFun {
         }
     }
 
-    private static void start11() {
-        int theInput;
+    private static void learn11() {
+        int n;
         int theOutput;
-        System.out.print("Okay. Enter a Natural Number: ");
+        System.out.print("Okay. Enter a Natural Number, n = ");
         try {
-            theInput = scan.nextInt();
+            n = scan.nextInt();
             scan.nextLine(); // to clear the rest of the line after the expected Int value
-            if ((theInput < 1)) {
-                System.err.println("Sorry, " + theInput + " must be > 0.");
+            if ((n < 1)) {
+                System.err.println("Sorry, " + n + " must be > 0.");
             } else {
-                theOutput = the11(theInput, true);
+                theOutput = the11(n, true);
                 System.out.println("Either way, The sum is " + theOutput);
                 // Testing whether the Non-User version works
                 System.out.println("If you had entered 36, the sum would have been " + the11(36, false));
@@ -91,19 +98,49 @@ public final class NumTheFun {
         }
     }
 
-    private static int the11(final int theInput, final boolean slow) {
-        final int returnValue = ((theInput * (theInput + 1)) / 2);
+    private static int the11(final int n, final boolean slow) {
+        final int returnValue = ((n * (n + 1)) / 2);
         if (slow) {
             System.out.println("\nIf you have enough free time, you can add:");
-            if (theInput > 10){
+            if (n > 10){
                 for(int i = 1; i <= 10 - 1; i++) System.out.print(i + " + ");
                 System.out.printf("... + ");
             }else{
-                for(int i = 1; i <= theInput - 1; i++) System.out.print(i + " + ");
+                for(int i = 1; i <= n - 1; i++) System.out.print(i + " + ");
             }
-            System.out.printf("%d = %d\n", theInput, returnValue);
+            System.out.printf("%d = %d\n", n, returnValue);
             
-            System.out.printf("Or ((%d x (%d + 1)) / 2) = %d\n", theInput, theInput, returnValue);
+            System.out.printf("Or ((%d x (%d + 1)) / 2) = %d\n", n, n, returnValue);
+        }
+        return returnValue;
+    }
+    
+    private static void learn12() {
+        int x;
+        int n;
+        int theOutput;
+        System.out.print("Okay. Enter a Natural Number, n = ");
+        n = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Okay. Enter an Integer (!= 1), x = ");
+        x = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        theOutput = the12(x, n, true);
+        System.out.println("Either way, The sum is " + theOutput);
+        // Testing whether the Non-User version works
+        System.out.println("If you had entered 5 and 36, the sum would have been " + the12(5, 36, false));
+    }
+
+    private static int the12(final int x, final int n, final boolean slow) {
+        final int returnValue =  ((pow(x, n)) - 1) / (x - 1);
+        if (slow) {
+            System.out.println("\nIf you have enough free time, you can add:");
+            for(int i = 0; i < n - 1; i++) System.out.printf("(%d ^ %d) + ", x, i);
+            System.out.printf("(%d ^ %d) = \n", x, n - 1);
+            for(int i = 0; i < n - 1; i++) System.out.printf("(%d) + ", pow(x, i));
+            System.out.printf("(%d) = %d\n", pow(x, n - 1), returnValue);
+            System.out.printf("Or ((%d ^ %d) - 1) / (%d - 1) = %d\n", x, n, x, returnValue);
+            System.out.printf("Or (%d) / (%d) = %d\n", pow(x, n) - 1, x - 1, returnValue);
         }
         return returnValue;
     }

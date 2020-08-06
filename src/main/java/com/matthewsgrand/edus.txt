@@ -59,7 +59,7 @@ Theorem 2-3 states:
 For given Integers, a, b, and c, if gcd(a, c) = 1 and c|ab, then c|b.
 
 @fakeDb Style
-/nTheorem 2-3 states:/n/nFor given Integers, a, b, and c, if gcd(a, c) = 1 and c|ab, then c|b.
+\nTheorem 2-3 states:\n\nFor given Integers, a, b, and c, if gcd(a, c) = 1 and c|ab, then c|b.
 
 Theorem 2-4 The Linear Diophantine Equation states:
 
