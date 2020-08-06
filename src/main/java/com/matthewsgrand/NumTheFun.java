@@ -166,16 +166,17 @@ public final class NumTheFun {
     private static int[] the13(final int k, final int n, final boolean slow) {
         int[] returnValue;
         int numRemaining = n;
-        int maxPow;
-        for (maxPow = 0; pow(k, maxPow) <= n; maxPow++);
-        //maxPow--; // Find the maximum Power of k we can have
-        if (slow) System.out.printf("First, we determine that the value of s, or the size of the array of a values, is %d. Since (%d ^ %d) = %d, which is > %d\n", maxPow, k, maxPow - 1, pow(k, maxPow - 1), n);
-        returnValue = new int[maxPow]; // Set the, now known, size of return array.
+        int retArrSize;
+        int powOfK;
+        for (retArrSize = 0; pow(k, retArrSize) <= n; retArrSize++); // Find the size of our return array
+        if (slow) System.out.printf("First, we determine that the value of s, or the size of the array of a values, is %d. Since (%d ^ %d) = %d, which is > %d\n", retArrSize, k, retArrSize - 1, pow(k, retArrSize - 1), n);
+        returnValue = new int[retArrSize]; // Set the, now known, size of return array.
         for (int i = 0; i < returnValue.length; i++) { // Go thru retArray
-            for (returnValue[i] = 0; (returnValue[i] * pow(k, maxPow - i - 1)) <= numRemaining; returnValue[i]++);
+            powOfK = retArrSize - i - 1;
+            for (returnValue[i] = 0; (returnValue[i] * pow(k, powOfK)) <= numRemaining; returnValue[i]++);
             returnValue[i]--; // Find the largest a[i] value
-            if (slow) System.out.printf("Then we then find that the largest a[%d] can be is %d since %d * %d > %d\n", i, returnValue[i], returnValue[i] + 1, pow(k, maxPow - i - 1), numRemaining);
-            numRemaining -= returnValue[i] * pow(k, maxPow - i - 1); // Prep the numRemain for the next a[i] value
+            if (slow) System.out.printf("Then we then find that the largest a[%d] can be is %d since %d * %d > %d\n", i, returnValue[i], returnValue[i] + 1, pow(k, powOfK), numRemaining);
+            numRemaining -= returnValue[i] * pow(k, powOfK); // Prep the numRemain for the next a[i] value
         }
         // if (slow) System.out.printf();
         return returnValue;

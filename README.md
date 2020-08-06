@@ -21,19 +21,19 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 
 ## Features
 - [x] Top Menu
-- [ ] Chapter 1
+- [x] Chapter 1
   - [x] Theorem 1-1 = Sum of the first N Integers.
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-  - [ ] Theorem 1-2 = Sum of x^j for j = [0, n-1].
+  - [x] Theorem 1-2 = Sum of x^j for j = [0, n-1].
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-  - [ ] Theorem 1-3 = Fake Fundamental Theorem of Arithmetic.
+  - [x] Theorem 1-3 = Fake Fundamental Theorem of Arithmetic.
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
+    - [x] User Test Loop
+    - [x] Non-User Version
 - [ ] Chapter 2
   - [ ] Theorem 2-1 = Euclid's Division Lemma.
     - [x] Educational Dialogue
