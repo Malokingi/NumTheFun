@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public final class NumTheFun {
+    //#region
     private NumTheFun() {}
 
     final static TempFakeDatabase fakeDB = new TempFakeDatabase();
@@ -45,7 +46,7 @@ public final class NumTheFun {
             }
         }
     }
-
+    //#endregion
     // Theorem_Menu(String Theorem) - Prints out some more dialogue and, depending on
     // the theorem selected in main(), either prints the educational dialogue or
     // lets the user test some values and see what they evaluate to.
@@ -66,6 +67,9 @@ public final class NumTheFun {
                         case "11": learn11(); break;
                         case "12": learn12(); break;
                         case "13": learn13(); break;
+                        case "21": learn21(); break;
+                        case "22": learn22(); break;
+                        case "23": learn23(); break;
                         default:
                             System.err.println("Sorry, " + the + " is either yet to be implimented or invalid.");
                             break;
@@ -80,7 +84,7 @@ public final class NumTheFun {
             }
         }
     }
-
+    //#region
     private static void learn11() {
         int n;
         int theOutput;
@@ -100,7 +104,6 @@ public final class NumTheFun {
             System.err.println("Sorry, a Natural Number is an Integer that is > 0.");
         }
     }
-
     private static int the11(final int n, final boolean slow) {
         final int returnValue = ((n * (n + 1)) / 2);
         if (slow) {
@@ -116,7 +119,6 @@ public final class NumTheFun {
         }
         return returnValue;
     }
-    
     private static void learn12() {
         int x;
         int n;
@@ -132,7 +134,6 @@ public final class NumTheFun {
         // Testing whether the Non-User version works
         System.out.println("If you had entered 36 and 5, the sum would have been " + the12(5, 36, false));
     }
-
     private static int the12(final int x, final int n, final boolean slow) {
         final int returnValue =  ((pow(x, n)) - 1) / (x - 1);
         if (slow) {
@@ -146,7 +147,6 @@ public final class NumTheFun {
         }
         return returnValue;
     }
-
     private static void learn13() {
         int k;
         int n;
@@ -162,7 +162,6 @@ public final class NumTheFun {
         // Testing whether the Non-User version works
         System.out.println("If you had entered 2 and 3000 (aka find the binary value of 3000), the array would have been " + arrToString(the13(2, 3000, false)));
     }
-
     private static int[] the13(final int k, final int n, final boolean slow) {
         int[] returnValue;
         int numRemaining = n;
@@ -179,6 +178,90 @@ public final class NumTheFun {
             numRemaining -= returnValue[i] * pow(k, powOfK); // Prep the numRemain for the next a[i] value
         }
         // if (slow) System.out.printf();
+        return returnValue;
+    }
+    private static void learn21() {
+        int k;
+        int j;
+        int[] theOutput;
+        System.out.print("Okay. Enter a Natural Number, k = ");
+        k = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Next, Enter an Integer, j = ");
+        j = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        theOutput = the21(k, j, true);
+        System.out.println("The result is " + arrToString(theOutput));
+        System.out.printf("In other words, %d = (%d x %d) + %d\n", j, theOutput[0], k, theOutput[1]);
+        // Testing whether the Non-User version works
+        System.out.println("If you had entered 59 and 2300, the array would have been " + arrToString(the21(59, 2300, false)));
+    }
+    private static int[] the21(final int k, final int j, final boolean slow) {
+        int[] returnValue = new int[2];
+        int q;
+        int r;
+        for (q = 0; q * k <= j; q++);
+        q--;
+        if (slow) System.out.printf("So, we determined that q = %d since (%d * %d) = %d > %d.\n", q, q + 1, k, (q + 1) * k, j);
+        r = j - q * k;
+        if (slow) System.out.printf("This means r = %d which is (%d - %d)\n", r, j, q * k);
+        // if (slow) System.out.printf();
+        returnValue[0] = q;
+        returnValue[1] = r;
+        return returnValue;
+    }
+    private static void learn22() {
+        int a;
+        int b;
+        int theOutput;
+        System.out.print("Okay. Enter an Integer, a = ");
+        a = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Next, Enter another Integer, b = ");
+        b = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        theOutput = gcd(a, b, true);
+        System.out.println("The result is " + theOutput + ". Pull out a calculator and check, if you don't believe me.");
+        // Testing whether the Non-User version works
+        System.out.println("If you had entered 60 and 320, the gcd would have been " + gcd(60, 320, false));
+    }
+    private static int gcd(final int a, final int b, final boolean slow) {
+        int returnValue = 0;
+        for (int i = 1; (i <= a) && (i <= b); i++) {
+            if ((the21(i, a, false)[1] == 0) && (the21(i, b, false)[1] == 0)) { // If the r value of the21 = 0, that means k|j
+                if (slow) System.out.printf("%d|%d && %d|%d, so the new returnValue = %d.\n", i, a, i, b, i);
+                returnValue = i;
+            }
+        }
+        // if (slow) System.out.printf("\n");
+        return returnValue;
+    }
+    //#endregion
+    private static void learn23() {
+        int a;
+        int b;
+        int theOutput;
+        System.out.print("Okay. Enter an Integer, a = ");
+        a = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Next, Enter another Integer, b = ");
+        b = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        theOutput = gcd(a, b, true);
+        System.out.println("The result is " + theOutput + ". Pull out a calculator and check, if you don't believe me.");
+        // Testing whether the Non-User version works
+        System.out.println("If you had entered 60 and 320, the gcd would have been " + gcd(60, 320, false));
+    }
+
+    private static int the23(final int a, final int b, final boolean slow) {
+        int returnValue = 0;
+        for (int i = 1; (i <= a) && (i <= b); i++) {
+            if ((the21(i, a, false)[1] == 0) && (the21(i, b, false)[1] == 0)) { // If the r value of the21 = 0, that means k|j
+                if (slow) System.out.printf("%d|%d && %d|%d, so the new returnValue = %d.\n", i, a, i, b, i);
+                returnValue = i;
+            }
+        }
+        // if (slow) System.out.printf("\n");
         return returnValue;
     }
 }

@@ -35,14 +35,14 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] User Test Loop
     - [x] Non-User Version
 - [ ] Chapter 2
-  - [ ] Theorem 2-1 = Euclid's Division Lemma.
+  - [x] Theorem 2-1 = Euclid's Division Lemma.
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
-  - [ ] Theorem 2-2 = Greatest Common Divisor.
+    - [x] User Test Loop
+    - [x] Non-User Version
+  - [x] Theorem 2-2 = Greatest Common Divisor.
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
+    - [x] User Test Loop
+    - [x] Non-User Version
   - [ ] Theorem 2-3 = If gcd(a, c) = 1 and c|ab, then c|b.
     - [x] Educational Dialogue
     - [ ] User Test Loop
@@ -60,3 +60,4 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [ ] Define more terms
   - [ ] Account for Integer Limitations
   - [ ] Improve the pace of the output (wait())
+  - [ ] Input Data Validation
