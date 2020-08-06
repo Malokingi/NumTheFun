@@ -28,8 +28,8 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Non-User Version
   - [ ] Theorem 1-2 = Sum of x^j for j = [0, n-1].
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
+    - [x] User Test Loop
+    - [x] Non-User Version
   - [ ] Theorem 1-3 = Fake Fundamental Theorem of Arithmetic.
     - [x] Educational Dialogue
     - [ ] User Test Loop

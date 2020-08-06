@@ -14,7 +14,11 @@ public final class NumTheFun {
         for (int i = 0; i < b; i++) r *= a;
         return r;
     }
-
+    private static String arrToString(int[] arr){ // Taks Int Arrays and makes them Human-Fathomable
+        String ret = "{ ";
+        for (int i = 0; i < arr.length - 1; i++) ret += arr[i] + ", ";
+        return ret + arr[arr.length - 1] + " }";
+    }
     public static void main(final String[] args) {
         boolean loop = true;
         String userInput;
@@ -51,9 +55,7 @@ public final class NumTheFun {
         System.out.print(fakeDB.getIntroDialogue(the + "Intro"));
         while (loop) {
             System.out.print(fakeDB.getMenuDialogue("Theo"));
-            
             userInput = scan.nextLine();
-
             switch (userInput) {
                 case "1":
                     System.out.println(fakeDB.getEduDialogue(the + "Edu"));
@@ -63,6 +65,7 @@ public final class NumTheFun {
                     switch (the) {
                         case "11": learn11(); break;
                         case "12": learn12(); break;
+                        case "13": learn13(); break;
                         default:
                             System.err.println("Sorry, " + the + " is either yet to be implimented or invalid.");
                             break;
@@ -109,7 +112,6 @@ public final class NumTheFun {
                 for(int i = 1; i <= n - 1; i++) System.out.print(i + " + ");
             }
             System.out.printf("%d = %d\n", n, returnValue);
-            
             System.out.printf("Or ((%d x (%d + 1)) / 2) = %d\n", n, n, returnValue);
         }
         return returnValue;
@@ -119,16 +121,16 @@ public final class NumTheFun {
         int x;
         int n;
         int theOutput;
-        System.out.print("Okay. Enter a Natural Number, n = ");
-        n = scan.nextInt();
-        scan.nextLine(); // to clear the rest of the line after the expected Int value
         System.out.print("Okay. Enter an Integer (!= 1), x = ");
         x = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Okay. Enter a Natural Number, n = ");
+        n = scan.nextInt();
         scan.nextLine(); // to clear the rest of the line after the expected Int value
         theOutput = the12(x, n, true);
         System.out.println("Either way, The sum is " + theOutput);
         // Testing whether the Non-User version works
-        System.out.println("If you had entered 5 and 36, the sum would have been " + the12(5, 36, false));
+        System.out.println("If you had entered 36 and 5, the sum would have been " + the12(5, 36, false));
     }
 
     private static int the12(final int x, final int n, final boolean slow) {
@@ -142,6 +144,40 @@ public final class NumTheFun {
             System.out.printf("Or ((%d ^ %d) - 1) / (%d - 1) = %d\n", x, n, x, returnValue);
             System.out.printf("Or (%d) / (%d) = %d\n", pow(x, n) - 1, x - 1, returnValue);
         }
+        return returnValue;
+    }
+
+    private static void learn13() {
+        int k;
+        int n;
+        int[] theOutput;
+        System.out.print("Okay. Enter a Natural Number, k = ");
+        k = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Okay. Enter a Natural Number, n = ");
+        n = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        theOutput = the13(k, n, true);
+        System.out.println("The result is " + arrToString(theOutput));
+        // Testing whether the Non-User version works
+        System.out.println("If you had entered 2 and 3000 (aka find the binary value of 3000), the array would have been " + arrToString(the13(2, 3000, false)));
+    }
+
+    private static int[] the13(final int k, final int n, final boolean slow) {
+        int[] returnValue;
+        int numRemaining = n;
+        int maxPow;
+        for (maxPow = 0; pow(k, maxPow) <= n; maxPow++);
+        //maxPow--; // Find the maximum Power of k we can have
+        if (slow) System.out.printf("First, we determine that the value of s, or the size of the array of a values, is %d. Since (%d ^ %d) = %d, which is > %d\n", maxPow, k, maxPow - 1, pow(k, maxPow - 1), n);
+        returnValue = new int[maxPow]; // Set the, now known, size of return array.
+        for (int i = 0; i < returnValue.length; i++) { // Go thru retArray
+            for (returnValue[i] = 0; (returnValue[i] * pow(k, maxPow - i - 1)) <= numRemaining; returnValue[i]++);
+            returnValue[i]--; // Find the largest a[i] value
+            if (slow) System.out.printf("Then we then find that the largest a[%d] can be is %d since %d * %d > %d\n", i, returnValue[i], returnValue[i] + 1, pow(k, maxPow - i - 1), numRemaining);
+            numRemaining -= returnValue[i] * pow(k, maxPow - i - 1); // Prep the numRemain for the next a[i] value
+        }
+        // if (slow) System.out.printf();
         return returnValue;
     }
 }
