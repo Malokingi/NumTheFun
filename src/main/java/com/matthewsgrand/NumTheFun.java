@@ -190,13 +190,14 @@ public final class NumTheFun {
         System.out.print("Next, Enter an Integer, j = ");
         j = scan.nextInt();
         scan.nextLine(); // to clear the rest of the line after the expected Int value
-        theOutput = the21(k, j, true);
+        theOutput = longDivide(k, j, true);
         System.out.println("The result is " + arrToString(theOutput));
         System.out.printf("In other words, %d = (%d x %d) + %d\n", j, theOutput[0], k, theOutput[1]);
         // Testing whether the Non-User version works
-        System.out.println("If you had entered 59 and 2300, the array would have been " + arrToString(the21(59, 2300, false)));
+        System.out.println("If you had entered 59 and 2300, the array would have been " + arrToString(longDivide(59, 2300, false)));
     }
-    private static int[] the21(final int k, final int j, final boolean slow) {
+    private static int[] longDivide(final int k, final int j, final boolean slow) {
+        if (slow) System.out.printf("\nNow finding (q, r) for (j, k) = (%d, %d)\n", j, k);
         int[] returnValue = new int[2];
         int q;
         int r;
@@ -226,9 +227,10 @@ public final class NumTheFun {
         System.out.println("If you had entered 60 and 320, the gcd would have been " + gcd(60, 320, false));
     }
     private static int gcd(final int a, final int b, final boolean slow) {
+        if (slow) System.out.printf("\nNow finding gcd(%d, %d)\n", a, b);
         int returnValue = 0;
         for (int i = 1; (i <= a) && (i <= b); i++) {
-            if ((the21(i, a, false)[1] == 0) && (the21(i, b, false)[1] == 0)) { // If the r value of the21 = 0, that means k|j
+            if ((longDivide(i, a, false)[1] == 0) && (longDivide(i, b, false)[1] == 0)) { // If the r value of the21 = 0, that means k|j
                 if (slow) System.out.printf("%d|%d && %d|%d, so the new returnValue = %d.\n", i, a, i, b, i);
                 returnValue = i;
             }
@@ -240,26 +242,40 @@ public final class NumTheFun {
     private static void learn23() {
         int a;
         int b;
-        int theOutput;
+        int c;
+        boolean[] theOutput;
         System.out.print("Okay. Enter an Integer, a = ");
         a = scan.nextInt();
         scan.nextLine(); // to clear the rest of the line after the expected Int value
         System.out.print("Next, Enter another Integer, b = ");
         b = scan.nextInt();
-        scan.nextLine(); // to clear the rest of the line after the expected Int value
-        theOutput = gcd(a, b, true);
-        System.out.println("The result is " + theOutput + ". Pull out a calculator and check, if you don't believe me.");
+        scan.nextLine();
+        System.out.print("Next, Enter a third Integer, c = ");
+        c = scan.nextInt();
+        scan.nextLine();
+        theOutput = the23(a, b, c, true);
+        if (theOutput[0]) {
+            System.out.printf("\nIt looks like, indeed, gcd(%d, %d) = 1.\n", a, c);
+            if (theOutput[1]) {
+                System.out.printf("It looks like the other assumption is true, %d | %d.\n", c, a * b);
+                System.out.printf("\nTherefore, it must be true that %d | %d. Double check if you'd like.\n", c, b);
+            } else {
+                System.out.printf("Oh, %d !| (%d * %d). That was a waste of time, it turns out.\n", c, a, b);
+            }
+        }else{
+            System.out.printf("Oh, gcd(%d, %d) != 1. That was a waste of time.\n", a, c);
+        }
         // Testing whether the Non-User version works
-        System.out.println("If you had entered 60 and 320, the gcd would have been " + gcd(60, 320, false));
+        System.out.println("If you had entered 5, 49 and 7, the result would have been " + the23(5, 49, 7, false)[0] + ", " + the23(5, 49, 7, false)[1]);
     }
 
-    private static int the23(final int a, final int b, final boolean slow) {
-        int returnValue = 0;
-        for (int i = 1; (i <= a) && (i <= b); i++) {
-            if ((the21(i, a, false)[1] == 0) && (the21(i, b, false)[1] == 0)) { // If the r value of the21 = 0, that means k|j
-                if (slow) System.out.printf("%d|%d && %d|%d, so the new returnValue = %d.\n", i, a, i, b, i);
-                returnValue = i;
-            }
+    private static boolean[] the23(final int a, final int b, final int c, final boolean slow) {
+        boolean[] returnValue = {false, false};
+        if (gcd(a, c, slow) == 1) {
+            returnValue[0] = true;
+        }
+        if (longDivide(c, a * b, slow)[1] == 0) {
+            returnValue[1] = true;
         }
         // if (slow) System.out.printf("\n");
         return returnValue;

@@ -43,10 +43,10 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-  - [ ] Theorem 2-3 = If gcd(a, c) = 1 and c|ab, then c|b.
+  - [x] Theorem 2-3 = If gcd(a, c) = 1 and c|ab, then c|b.
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
+    - [x] User Test Loop
+    - [x] Non-User Version
   - [ ] Theorem 2-4 = Linear Diophantine Equation.
     - [x] Educational Dialogue
     - [ ] User Test Loop
