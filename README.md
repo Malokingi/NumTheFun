@@ -30,7 +30,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-  - [x] Theorem 1-3 = Fake Fundamental Theorem of Arithmetic.
+  - [x] Theorem 1-3 = Basis Represenataion Theorem.
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
@@ -51,7 +51,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
-  - [ ] Theorem 2-5 = True Fundamental Theorem of Arithmetic.
+  - [ ] Theorem 2-5 = Fundamental Theorem of Arithmetic.
     - [x] Educational Dialogue
     - [ ] User Test Loop
     - [ ] Non-User Version
