@@ -1,6 +1,7 @@
 package com.matthewsgrand;
 
 import java.io.Console;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -72,6 +73,7 @@ public final class NumTheFun {
                         case "22": learn22(); break;
                         case "23": learn23(); break;
                         case "24": learn24(); break;
+                        case "25": learn25(); break;
                         default:
                             System.err.println("Sorry, " + the + " is either yet to be implimented or invalid.");
                             break;
@@ -203,7 +205,7 @@ public final class NumTheFun {
         int[] returnValue = new int[2];
         int q;
         int r;
-        for (q = 0; q * k <= j; q++);
+        for (q = 0; (q * k) <= j; q++);
         q--;
         if (slow) System.out.printf("So, we determined that q = %d since (%d * %d) = %d > %d.\n", q, q + 1, k, (q + 1) * k, j);
         r = j - q * k;
@@ -281,7 +283,6 @@ public final class NumTheFun {
         // if (slow) System.out.printf("\n");
         return returnValue;
     }
-    //#endregion
     private static void learn24() {
         int a;
         int b;
@@ -316,7 +317,6 @@ public final class NumTheFun {
         theOutput = the24(14, 49, 91, false);
         System.out.printf("If you had entered 14, 49 and 91, the result would have been (%d, %d)", theOutput[0], theOutput[1]);
     }
-
     private static int[] the24(final int a, final int b, final int c, final boolean slow) {
         int[] returnValue = new int[2];
         int d = gcd(a, b, false);
@@ -347,6 +347,51 @@ public final class NumTheFun {
             }
         }else{
             System.err.printf("%d !| %d, so there are no solutions.\n", d, c);
+        }
+        // if (slow) System.out.printf("\n");
+        return returnValue;
+    }
+    //#endregion
+    private static void learn25() {
+        int n;
+        int[] theOutput;
+        System.out.print("Enter a Natural Number, n = ");
+        n = scan.nextInt();
+        scan.nextLine();
+        theOutput = the25(n, true);
+        System.out.printf("The Prime Factorization of %d is ", n);
+        System.out.println(arrToString(theOutput));
+        // Testing whether the Non-User version works
+        System.out.println("If you had entered 1000000, the Prime Factorization would have been: " + arrToString(the25(1000000, false)));
+    }
+
+    private static int[] the25(final int n, final boolean slow) {
+        int[] returnValue;
+        ArrayList<Integer> tempArr = new ArrayList<Integer>();
+        int number = n;
+        int maxFact;
+        int[] qAndR;
+        boolean pFound;
+        while (number > 0) {
+            maxFact = (int) Math.floor(Math.sqrt((double)number)); // Calculating Maximum Possible Factor
+            pFound = false;
+            for (int i = 2; i <= maxFact; i++) {
+                qAndR = longDivide(i, number, false);
+                if (qAndR[1] == 0) {
+                    tempArr.add(i);
+                    number = qAndR[0];
+                    i = maxFact;
+                    pFound = true;
+                }
+            }
+            if (!pFound) {
+                tempArr.add(number);
+                number = 0;
+            }
+        }
+        returnValue = new int[tempArr.size()];
+        for (int i = 0; i < returnValue.length; i++) {
+            returnValue[i] = tempArr.remove(0);
         }
         // if (slow) System.out.printf("\n");
         return returnValue;

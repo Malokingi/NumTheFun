@@ -34,7 +34,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-- [ ] Chapter 2
+- [x] Chapter 2
   - [x] Theorem 2-1 = Euclid's Division Lemma.
     - [x] Educational Dialogue
     - [x] User Test Loop
@@ -47,14 +47,14 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-  - [ ] Theorem 2-4 = Linear Diophantine Equation.
+  - [x] Theorem 2-4 = Linear Diophantine Equation.
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
-  - [ ] Theorem 2-5 = Fundamental Theorem of Arithmetic.
+    - [x] User Test Loop
+    - [x] Non-User Version
+  - [x] Theorem 2-5 = Fundamental Theorem of Arithmetic.
     - [x] Educational Dialogue
-    - [ ] User Test Loop
-    - [ ] Non-User Version
+    - [x] User Test Loop
+    - [x] Non-User Version
 - [ ] Bonus Content // If I get done with everything with enough time to spare. 
   - [ ] Add Proofs
   - [ ] Define more terms
