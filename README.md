@@ -61,3 +61,4 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [ ] Account for Integer Limitations
   - [ ] Improve the pace of the output (wait())
   - [ ] Input Data Validation
+  - [ ] Make Theroem 2-4 return the smallest solution

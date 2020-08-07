@@ -1,5 +1,6 @@
 package com.matthewsgrand;
 
+import java.io.Console;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -70,6 +71,7 @@ public final class NumTheFun {
                         case "21": learn21(); break;
                         case "22": learn22(); break;
                         case "23": learn23(); break;
+                        case "24": learn24(); break;
                         default:
                             System.err.println("Sorry, " + the + " is either yet to be implimented or invalid.");
                             break;
@@ -238,7 +240,6 @@ public final class NumTheFun {
         // if (slow) System.out.printf("\n");
         return returnValue;
     }
-    //#endregion
     private static void learn23() {
         int a;
         int b;
@@ -276,6 +277,76 @@ public final class NumTheFun {
         }
         if (longDivide(c, a * b, slow)[1] == 0) {
             returnValue[1] = true;
+        }
+        // if (slow) System.out.printf("\n");
+        return returnValue;
+    }
+    //#endregion
+    private static void learn24() {
+        int a;
+        int b;
+        int c;
+        int d;
+        int[] theOutput;
+        System.out.print("Okay. Enter an Integer, a = ");
+        a = scan.nextInt();
+        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Next, Enter another Integer, b = ");
+        b = scan.nextInt();
+        scan.nextLine();
+        System.out.print("Next, Enter a third Integer, c = ");
+        c = scan.nextInt();
+        scan.nextLine();
+        d = gcd(a, b, false);
+        if (longDivide(d, c, false)[1] == 0) {
+            theOutput = the24(a, b, c, true);
+            if ((a * theOutput[0] + b * theOutput[1]) == c) {
+                System.out.printf("There's good news. All the assumptions were met, so I found a solution: (x, y) = (%d, %d)\n", theOutput[0], theOutput[1]);
+                System.out.printf("\tSo, (%d x %d) + (%d x %d) = %d\n", a, theOutput[0], b, theOutput[1], c);
+                System.out.printf("\tThat is, (%d) + (%d) = %d\n", a * theOutput[0], b * theOutput[1], c);
+                System.out.println("Furthermore, all conceivable solutions for this equation take the form of:");
+                System.out.printf("\t(x, y) = (%d + (t x %d), (%d + (t x %d)))\nfor any integer, t.\n", theOutput[0], b / d, theOutput[1], a / d);
+            }else{
+                System.out.println("It looks like, although the solution must exist, It's too complicated for me to find at my current skill level.");
+            }
+        }else{
+            System.out.printf("It looks like gcd(%d, %d) = %d and %d !| %d. So there's no point in going forward.\n", a, b, d, d, c);
+        }
+        // Testing whether the Non-User version works
+        theOutput = the24(14, 49, 91, false);
+        System.out.printf("If you had entered 14, 49 and 91, the result would have been (%d, %d)", theOutput[0], theOutput[1]);
+    }
+
+    private static int[] the24(final int a, final int b, final int c, final boolean slow) {
+        int[] returnValue = new int[2];
+        int d = gcd(a, b, false);
+        int magnitude = 0;
+        final int magnitudeLimit = 3000;
+        boolean noSolve = true;
+        if (longDivide(d, c, false)[1] == 0) {
+            if (slow) System.out.printf("About to start Brute forcing magnitude, ");
+            while (magnitude <= magnitudeLimit) {
+                if (slow) System.out.printf("m = %d ", magnitude);
+                for (int x = -magnitude; x <= magnitude; x++) {
+                    for (int y = -magnitude; y <= magnitude; y++) {
+                        if (((x * a) + (y * b)) == c) {
+                            returnValue[0] = x;
+                            returnValue[1] = y;
+                            magnitude = magnitudeLimit;
+                            x = magnitudeLimit + 1;
+                            y = magnitudeLimit + 1;
+                            noSolve = false;
+                        }
+                    }
+                }
+                magnitude++;
+            }
+            if (slow) System.out.printf("\n");
+            if (noSolve) {
+                System.err.printf("I couldn't find a solution! I checked all possible combinations for x and y where both |x| and |y| are <= %d... :/\n", magnitudeLimit);
+            }
+        }else{
+            System.err.printf("%d !| %d, so there are no solutions.\n", d, c);
         }
         // if (slow) System.out.printf("\n");
         return returnValue;
