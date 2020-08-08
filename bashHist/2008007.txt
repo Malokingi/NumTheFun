@@ -1,0 +1,151 @@
+    1  help
+    2  help
+    3  exit
+    4  dir
+    5  cd C\code
+    6  mkdir hello-maven
+    7  cd hello-maven/
+    8  ls
+    9  notepad pom.xml
+   10  ls
+   11  mvn verify
+   12  ls
+   13  notepad pom.xml
+   14  mvn verify
+   15  ls ../.m2
+   16  ls ../.m2/repository/
+   17  notepad pom.xml
+   18  ls ../.m2/repository/junit/
+   19  ls ../.m2/repository/junit/junit/
+   20  notepad pom.xml
+   21  mvn verify
+   22  notepad pom.xml
+   23  mvn verify
+   24  ls
+   25  ls target/
+   26  mkdir src/main.java
+   27  mkdir -p src/main.java
+   28  notepad src/main/java
+   29  mkdir -p src/main/java
+   30  notepad src/main/java/Hello.java
+   31  mvn compile
+   32  notepad src/main/java/Hello.java
+   33  notepad pom.xml
+   34  mvn package
+   35  notepad src/main/java/Hello.java
+   36  mvn compile
+   37  mvn compile
+   38  mvn ?
+   39  mvn -?
+   40  git init
+   41  ls
+   42  ls -a
+   43  ls .git/
+   44  git status 
+   45  git push
+   46  git add pom.xml src
+   47  git status 
+   48  git add target/
+   49  git status 
+   50  git commit -m "first commit"
+   51  git checkout
+   52  Function Key 7
+   53  cd ..
+   54  ls
+   55  doskey /history
+   56  /history
+   57  history
+   58  ls
+   59  history > Documents/gitbashHistory/20200804.txt
+   60  notepad history > Documents/gitbashHistory/20200804.txt
+   61  notepad Documents/gitbashHistory/20200804.txt
+   62  notepad history > Documents/gitbashHistory/20200804.txt
+   63  mkdir Documents/gitbashHistory/
+   64  mkdir -p Documents/gitbashHistory/
+   65  ls Documents/
+   66  ls Documents/Coding\ Study/
+   67  mkdir Documents/Coding\ Study/gitbashHistory
+   68  mkdir -p Documents/Coding\ Study/gitbashHistory
+   69  mkdir -p Documents/Coding\ Study/gitbashHistory
+   70  history
+   71  history > Documents/Coding\ Study/gitbashHistory/20200804.txt
+   72  history > Documents/Coding\ Study/gitbashHistory/20200804.txt
+   73  notepad Documents/Coding\ Study/gitbashHistory/20200804.txt
+   74  history > Documents/CodingStudy/gitbashHistory/20200804.txt
+   75  git commit -m "first commit"
+   76  choco install vscode
+   77  sudo
+   78  hostory
+   79  history
+   80  history > Documents/CodingStudy/gitbashHistory/20200804.txt
+   81  exit
+   82   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+   83  exit
+   84   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+   85  history
+   86  history > Documents/CodingStudy/gitbashHistory/200804.txt
+   87  history > proj-0/bashHist/200804.txt 
+   88  exit
+   89  history
+   90  git commit "first commit"
+   91  cd proj-0/
+   92  git commit "first commit"
+   93  git commit -m "first commit"
+   94  git status
+   95  git add .
+   96  git status
+   97  git push
+   98  git pull
+   99  git push
+  100  history
+  101  history > bashHist/200804.txt 
+  102  exit
+  103  curl -v localhost:8080
+  104  curl -v google.com
+  105  curl -v https//google.com
+  106  curl -v https://www.google.com
+  107  echo "That last one worked"
+  108  history
+  109  exit
+  110   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  111  exit
+  112   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  113  exit
+  114   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  115  exit
+  116   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  117  exit
+  118   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  119  exit
+  120   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  121  exit
+  122   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  123  exit
+  124   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  125  exit
+  126   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  127  exit
+  128   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  129  exit
+  130   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  131  exit
+  132   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  133  exit
+  134   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  135  exit
+  136   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  137  exit
+  138  mvn clean compile exec:java -q -e
+  139  cd proj-0/
+  140  mvn clean compile exec:java -q -e
+  141  mvn clean compile exec:java
+  142  mvn clean compile -q
+  143  mvn exec:java
+  144  git add .
+  145  git commit -m "the24 done"
+  146  git push
+  147  git status
+  148  git add .
+  149  git commit -m "First Draft All Done"
+  150  git push
+  151  history > bashHist/2008007.txt
