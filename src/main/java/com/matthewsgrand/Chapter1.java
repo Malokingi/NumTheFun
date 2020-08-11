@@ -56,8 +56,8 @@ public class Chapter1 extends mwgMethods {
             System.out.printf("(%d ^ %d) = \n", x, n - 1);
             for(int i = 0; i < n - 1; i++) System.out.printf("(%d) + ", pow(x, i));
             System.out.printf("(%d) = %d\n", pow(x, n - 1), returnValue);
-            System.out.printf("Or ((%d ^ %d) - 1) / (%d - 1) = %d\n", x, n, x, returnValue);
-            System.out.printf("Or (%d) / (%d) = %d\n", pow(x, n) - 1, x - 1, returnValue);
+            System.out.printf("Or:\n ((%d ^ %d) - 1) / (%d - 1) =\n", x, n, x);
+            System.out.printf("(%d) / (%d) = %d\n", pow(x, n) - 1, x - 1, returnValue);
         }
         return returnValue;
     }
@@ -80,7 +80,7 @@ public class Chapter1 extends mwgMethods {
         int retArrSize;
         int powOfK;
         for (retArrSize = 0; pow(k, retArrSize) <= n; retArrSize++); // Find the size of our return array
-        if (slow) System.out.printf("First, we determine that the value of s, or the size of the array of a values, is %d. Since (%d ^ %d) = %d, which is > %d\n", retArrSize, k, retArrSize - 1, pow(k, retArrSize - 1), n);
+        if (slow) System.out.printf("\nFirst, we determine that the value of s, or the size of the array of a values, is %d. Since (%d ^ %d) = %d, which is > %d\n", retArrSize, k, retArrSize, pow(k, retArrSize), n);
         returnValue = new int[retArrSize]; // Set the, now known, size of return array.
         for (int i = 0; i < returnValue.length; i++) { // Go thru retArray
             powOfK = retArrSize - i - 1;

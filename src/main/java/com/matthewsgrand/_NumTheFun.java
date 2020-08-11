@@ -1,17 +1,21 @@
 package com.matthewsgrand;
 
+import java.io.IOException;
+
 public final class _NumTheFun extends mwgMethods {
-    private _NumTheFun() {}
+    private _NumTheFun() {
+    }
 
     final static TempFakeDatabase fakeDB = new TempFakeDatabase();
-    
+
     public static void main(final String[] args) {
         boolean loop = true;
         String userInput;
+        clearConsole();
         System.out.print(fakeDB.getIntroDialogue("Main"));
-        while(loop){
+        while (loop) {
             System.out.print(fakeDB.getMenuDialogue("Main"));
-            
+
             userInput = scan.nextLine();
 
             switch (userInput) {
@@ -20,9 +24,14 @@ public final class _NumTheFun extends mwgMethods {
                     loop = false;
                     scan.close();
                     break;
-                case "11": case "12": case "13": // If any of these are the case, call theMenu()
-                case "21": case "22": case "23":
-                case "24": case "25":
+                case "11":
+                case "12":
+                case "13": // If any of these are the case, call theMenu()
+                case "21":
+                case "22":
+                case "23":
+                case "24":
+                case "25":
                     theMenu(userInput);
                     break;
                 default:
@@ -31,25 +40,30 @@ public final class _NumTheFun extends mwgMethods {
             }
         }
     }
+
     /**
-     * Theorem_Menu(String Theorem) - Prints out some more dialogue and, depending on
-     * the theorem selected in main(), either prints the educational dialogue or
+     * Theorem_Menu(String Theorem) - Prints out some more dialogue and, depending
+     * on the theorem selected in main(), either prints the educational dialogue or
      * lets the user test some values and see what they evaluate to.
+     * 
      * @param the
-     */ 
+     */
     private static void theMenu(final String the) {
         String userInput;
         boolean loop = true;
+        clearConsole();
         System.out.print(fakeDB.getIntroDialogue(the + "Intro"));
         while (loop) {
             System.out.print(fakeDB.getMenuDialogue("Theo"));
             userInput = scan.nextLine();
             switch (userInput) {
                 case "1":
+                    clearConsole();
                     System.out.println(fakeDB.getEduDialogue(the + "Edu"));
                     System.out.println();
                     break;
                 case "2":
+                    clearConsole();
                     switch (the) {
                         case "11": Chapter1.learn11(); break;
                         case "12": Chapter1.learn12(); break;
@@ -65,6 +79,7 @@ public final class _NumTheFun extends mwgMethods {
                     }
                     break;
                 case "0":
+                    clearConsole();
                     loop = false;
                     break;
                 default:

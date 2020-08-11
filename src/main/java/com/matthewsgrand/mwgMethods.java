@@ -1,5 +1,6 @@
 package com.matthewsgrand;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class mwgMethods {
@@ -13,5 +14,16 @@ public class mwgMethods {
         String r = "{ ";
         for (int i = 0; i < arr.length - 1; i++) r += arr[i] + ", ";
         return r + arr[arr.length - 1] + " }";
+    }
+    public static void clearConsole() {
+        try {
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        } catch (IOException e) {
+            System.out.println("Failed to clear console due to a IOException.");
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            System.out.println("Failed to clear console due to a InterruptedException.");
+            e.printStackTrace();
+        }
     }
 }
