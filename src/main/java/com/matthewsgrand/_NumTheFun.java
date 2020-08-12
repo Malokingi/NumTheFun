@@ -1,7 +1,5 @@
 package com.matthewsgrand;
 
-import java.io.IOException;
-
 public final class _NumTheFun extends mwgMethods {
     private _NumTheFun() {
     }

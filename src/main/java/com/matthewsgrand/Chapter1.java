@@ -1,27 +1,18 @@
 package com.matthewsgrand;
 
-import java.util.InputMismatchException;
-
 public class Chapter1 extends mwgMethods {
     public static void learn11() {
         int n;
         int theOutput;
         System.out.print("Okay. Enter a Natural Number, n = ");
-        try {
-            n = scan.nextInt();
-            scan.nextLine(); // to clear the rest of the line after the expected Int value
-            if ((n < 1)) {
-                System.err.println("Sorry, " + n + " must be > 0.");
-            } else {
-                theOutput = the11(n, true);
-                System.out.println("Either way, The sum is " + theOutput);
-            }
-        } catch (final InputMismatchException e) {
-            System.err.println("Sorry, a Natural Number is an Integer that is > 0.");
-        }
+        n = readInt(1, pow(2, 16) - 1);
+        theOutput = the11(n, true);
+        System.out.println("Either way, The sum is " + theOutput);
     }
     private static int the11(final int n, final boolean slow) {
-        final int returnValue = ((n * (n + 1)) / 2);
+        int returnValue;
+        if (n % 2 == 0) returnValue = ((n / 2) * (n + 1));
+        else returnValue = (n * ((n + 1) / 2));
         if (slow) {
             System.out.println("\nIf you have enough free time, you can add:");
             if (n > 10){
@@ -31,7 +22,7 @@ public class Chapter1 extends mwgMethods {
                 for(int i = 1; i <= n - 1; i++) System.out.print(i + " + ");
             }
             System.out.printf("%d = %d\n", n, returnValue);
-            System.out.printf("Or ((%d x (%d + 1)) / 2) = %d\n", n, n, returnValue);
+            System.out.printf("Or ((%d x (%d + 1)) / 2) = ", n, n, returnValue);
         }
         return returnValue;
     }
@@ -40,11 +31,13 @@ public class Chapter1 extends mwgMethods {
         int n;
         int theOutput;
         System.out.print("Okay. Enter an Integer (!= 1), x = ");
-        x = scan.nextInt();
-        scan.nextLine(); // to clear the rest of the line after the expected Int value
-        System.out.print("Okay. Enter a Natural Number, n = ");
-        n = scan.nextInt();
-        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        x = readInt();
+        while (x == 1) {
+            System.out.print("x must != 1. Please try again x = ");
+            x = readInt();
+        }
+        System.out.print("Now enter a Natural Number, n = ");
+        n = readInt(1);
         theOutput = the12(x, n, true);
         System.out.println("Either way, The sum is " + theOutput);
     }
@@ -65,12 +58,10 @@ public class Chapter1 extends mwgMethods {
         int k;
         int n;
         int[] theOutput;
-        System.out.print("Okay. Enter a Natural Number, k = ");
-        k = scan.nextInt();
-        scan.nextLine(); // to clear the rest of the line after the expected Int value
-        System.out.print("Okay. Enter a Natural Number, n = ");
-        n = scan.nextInt();
-        scan.nextLine(); // to clear the rest of the line after the expected Int value
+        System.out.print("Enter a Natural Number. This will be the base, k = ");
+        k = readInt(1);
+        System.out.printf("Enter another Natural Number. We'll find this number to base %d, n = ", k);
+        n = readInt(1);
         theOutput = the13(k, n, true);
         System.out.println("The result is " + arrToString(theOutput));
     }

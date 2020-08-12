@@ -58,7 +58,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 - [ ] Bonus Content // If I get done with everything with enough time to spare. 
   - [ ] Add Proofs
   - [ ] Define more terms
-  - [ ] Account for Integer Limitations
+  - [ ] Account for Integer Limitations (use longs instead of ints)
   - [ ] Improve the pace of the output (wait())
-  - [ ] Input Data Validation
-  - [ ] Make Theroem 2-4 return the smallest solution
+  - [x] Input Data Validation
+  - [x] Make Theroem 2-4 return the smallest solution
