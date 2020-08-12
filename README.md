@@ -62,3 +62,4 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [ ] Improve the pace of the output (wait())
   - [x] Input Data Validation
   - [x] Make Theroem 2-4 return the smallest solution
+  - [ ] Make longDivide() better or find some other way to test divisibility for large numbers

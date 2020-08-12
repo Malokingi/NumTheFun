@@ -146,7 +146,7 @@ public class Chapter2 extends mwgMethods {
         System.out.print("Enter a Natural Number, n = ");
         n = readInt(1);
         theOutput = the25(n, true);
-        System.out.printf("The Prime Factorization of %d is %s", n, arrToString(theOutput));
+        System.out.printf("\nThe Prime Factorization of %d is %s", n, arrToString(theOutput));
         //System.out.println(arrToString(theOutput));
     }
     private static int[] the25(final int n, final boolean slow) {
@@ -172,6 +172,7 @@ public class Chapter2 extends mwgMethods {
                 }
             }
             if (!pFound) {
+                if(slow) System.out.printf("\nFound %d", i);
                 tempArr.add(number);
                 number = 0;
             }
