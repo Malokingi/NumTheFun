@@ -1,5 +1,5 @@
 What do you want to do?
-(excluding this message, things in parentheses indicate an input command option)
+(excluding this message, things in parentheses usually indicate an input command option)
 
     (11): Theorem 1-1 = Sum of the first N Integers.
     (12): Theorem 1-2 = Sum of x^j for j = [0, n-1].
@@ -11,4 +11,4 @@ What do you want to do?
     (24): Theorem 2-4 = Linear Diophantine Equation.
     (25): Theorem 2-5 = Fundamental Theorem of Arithmetic.
 
-Well, put in some input: 
+    (00): Quit Program.

@@ -1,0 +1,5 @@
+Theorem 1-2 states:
+
+For any real number, x, where x != 1, and a given Natural Number, n, then:
+
+    (x ^ 0) + (x ^ 1) + (x ^ 2) + ... + (x ^ (n - 1)) = ((x ^ n) - 1) / (x - 1)

@@ -1,0 +1,11 @@
+Before getting to the theorem part, I'll explain what a Greatest Common Divisor is:
+
+For given Integers, a and b, where a and b are not both 0, an Integer, d, is called the Greatest Common Divisor, or gcd, of a and b if:
+
+    i. d > 0
+    ii. d is a Common Divisor of a and b
+    iii. all other Integers that are divisors of a and b are also divisors of d
+
+Theorem 2-2 states:
+
+For given Integers, a and b, where a and b are not both 0, then gcd(a, b) exists and is unique.

@@ -3,21 +3,21 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 
 ## Target tech stack
 - [ ] Java 8
-  - [ ] File I/O
-    - [x] Takes User Input (from CL, for example)
-    - [ ] Takes File Input
-  - [ ] Collections API
+  - [x] File I/O
+    - [x] Takes User Input (from Command Line, for example)
+    - [x] Takes File Input
+  - [x] Collections API
   - [ ] Concurrency
-- [ ] Maven 3
+- [x] Maven 3
   - [x] Setup
-  - [ ] Manage (Clean, Compile, etc.)
-- [ ] JUnit 5 (executed via Maven?)
+  - [x] Manage (Clean, Compile, etc.)
+- [ ] JUnit 5
   - [ ] Testing
 - [x] Git
   - [x] Init
   - [x] General Version control (commit, push, etc.)
 - [ ] PostgreSQL 9+
-  - [ ] Get and/or set DB Info (probably)
+  - [ ] Get and/or set DB Info
 
 ## Features
 - [x] Top Menu
@@ -55,7 +55,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-- [ ] Bonus Content // If I get done with everything with enough time to spare. 
+- [ ] Bonus Content // If I get done early
   - [ ] Add Proofs
   - [ ] Define more terms
   - [ ] Account for Integer Limitations (use longs instead of ints)

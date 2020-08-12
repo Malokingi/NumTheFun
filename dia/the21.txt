@@ -1,0 +1,7 @@
+Theorem 2-1 Euclid's Division Lemma states:
+
+For a given Natural Number, k, and an Integer, j, there exists a pair of Integers, q and r, such that:
+
+    j = qk + r
+
+ Also, 0 <= r < k and the pair (q, r) is unique.

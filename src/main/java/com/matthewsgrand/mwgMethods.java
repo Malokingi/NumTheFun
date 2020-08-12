@@ -1,5 +1,7 @@
 package com.matthewsgrand;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -9,24 +11,31 @@ public class mwgMethods {
 
     public static int pow(int a, int b) { // a power function that doesn't need Doubles
         int r = 1;
-        for (int i = 0; i < b; i++) r *= a;
+        for (int i = 0; i < b; i++)
+            r *= a;
         return r;
     }
 
     public static String arrToString(int[] arr) { // Takes Int Arrays and makes them Human-Fathomable
         String r = "{ ";
-        for (int i = 0; i < arr.length - 1; i++) r += arr[i] + ", ";
+        for (int i = 0; i < arr.length - 1; i++)
+            r += arr[i] + ", ";
         return r + arr[arr.length - 1] + " }";
     }
 
-    public static int sqrtInt(int i) { return (int) Math.floor(Math.sqrt((double) i)); }
-    
-    public static int readInt(int... args) { // gets the next Int input from user, with the option to specify min and max.
+    public static int sqrtInt(int i) {
+        return (int) Math.floor(Math.sqrt((double) i));
+    }
+
+    public static int readInt(int... args) { // gets the next Int input from user, with the option to specify min and
+                                             // max.
         int r = 0;
         int min = -2147483648;
         int max = 2147483647;
-        if (args.length > 0) min = args[0];
-        if (args.length > 1) max = args[1];
+        if (args.length > 0)
+            min = args[0];
+        if (args.length > 1)
+            max = args[1];
         if (args.length > 2) {
             System.err.printf("readInt() takes up to two args. %d is too many!\n", args.length);
             return min;
@@ -40,9 +49,9 @@ public class mwgMethods {
             }
         } catch (InputMismatchException e) {
             scan.nextLine(); // to clear the rest of the line since the other call to nextLine was skipped
-            System.err.print("Your input must be an integer.\n" +
-                "If it's outside the range [-2147483648, 2147483647], it won't count as an integer.\n" +
-                "Try again: ");
+            System.err.print("Your input must be an integer.\n"
+                    + "If it's outside the range [-2147483648, 2147483647], it won't count as an integer.\n"
+                    + "Try again: ");
             r = readInt(min, max);
         }
         return r;
@@ -56,6 +65,20 @@ public class mwgMethods {
             e.printStackTrace();
         } catch (InterruptedException e) {
             System.out.println("Failed to clear console due to InterruptedException.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void readFile(String fileName) {
+        try {
+            Scanner printFile = new Scanner(new FileInputStream(fileName));
+            System.out.println();
+            while (printFile.hasNext()){
+                System.out.println(printFile.nextLine());
+            }
+            printFile.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("Failed to find that file.");
             e.printStackTrace();
         }
     }

@@ -1,0 +1,3 @@
+Theorem 2-3 states:
+
+For given Integers, a, b, and c, if gcd(a, c) = 1 and c|ab, then c|b.

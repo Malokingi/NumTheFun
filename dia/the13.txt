@@ -1,0 +1,7 @@
+Theorem 1-3 kinda looks like a first draft of The Fundamental Theorem of Arithmetic with hints of Euclid's Division Lemma sprinkled about:
+
+For given Natural Numbers, k and n, there exists:
+
+    n = a[0]k^(s) + a[1]k^(s - 1) + ... + a[s]k^(0)
+
+where a[0] != 0 and 0 <= a[i] < k. Also, this represenataion of n is unique in relation to k. This is referred to as "The representation of n to base k".

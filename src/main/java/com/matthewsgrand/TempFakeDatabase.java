@@ -2,7 +2,7 @@ package com.matthewsgrand;
 
 public final class TempFakeDatabase {
     public TempFakeDatabase() { }
-
+/**
     private final String[] intros = {
         "Hello. You've reached Matthew's Grand Number Theory FUNdamentals Program!!\n\nWe're going to have some fun.\n",
         "Theorem 1-1 = Sum of the first N Integers.\n",
@@ -79,4 +79,5 @@ public final class TempFakeDatabase {
         }
         return returnValue;
     }
+    */
 }

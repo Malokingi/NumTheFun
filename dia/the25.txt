@@ -1,0 +1,7 @@
+Theorem 2-5 The Fundamental Theorem of Arithmetic states:
+
+For Each Natural Number, n, there exists an array of Prime Numbers, p, where p[1] <= p[2] <= ... <= p[r] such that:
+
+    n = p[1]p[2]...p[r]
+
+This factorization is unique.

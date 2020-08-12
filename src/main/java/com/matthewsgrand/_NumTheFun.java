@@ -4,21 +4,22 @@ public final class _NumTheFun extends mwgMethods {
     private _NumTheFun() {
     }
 
-    final static TempFakeDatabase fakeDB = new TempFakeDatabase();
+    //final static TempFakeDatabase fakeDB = new TempFakeDatabase();
 
     public static void main(final String[] args) {
         boolean loop = true;
         String userInput;
         clearConsole();
-        System.out.print(fakeDB.getIntroDialogue("Main"));
+        //System.out.print(fakeDB.getIntroDialogue("Main"));
+        readFile("dia/intro.txt");
         while (loop) {
-            System.out.print(fakeDB.getMenuDialogue("Main"));
-
+            readFile("dia/topMenu.txt");
+            System.out.print("\nWell, put in some input: ");
             userInput = scan.nextLine();
 
             switch (userInput) {
                 case "00":
-                    System.out.print(fakeDB.getIntroDialogue("Outro"));
+                    System.out.println("You want to Quit? But you just got here... Goodbye.\n");
                     loop = false;
                     scan.close();
                     break;
@@ -50,18 +51,18 @@ public final class _NumTheFun extends mwgMethods {
         String userInput;
         boolean loop = true;
         clearConsole();
-        System.out.print(fakeDB.getIntroDialogue(the + "Intro"));
+        readFile("dia/the" + the + ".txt");
         while (loop) {
-            System.out.print(fakeDB.getMenuDialogue("Theo"));
+            readFile("dia/theMenu.txt");
+            System.out.print("\nWhat do you want to do? ");
             userInput = scan.nextLine();
             switch (userInput) {
                 case "1":
                     clearConsole();
-                    System.out.println(fakeDB.getEduDialogue(the + "Edu"));
-                    System.out.println();
+                    readFile("dia/the" + the + ".txt");
                     break;
                 case "2":
-                    clearConsole();
+                    //clearConsole();
                     switch (the) {
                         case "11": Chapter1.learn11(); break;
                         case "12": Chapter1.learn12(); break;

@@ -6,6 +6,7 @@ public class Chapter1 extends mwgMethods {
         int theOutput;
         System.out.print("Okay. Enter a Natural Number, n = ");
         n = readInt(1, pow(2, 16) - 1);
+        clearConsole();
         theOutput = the11(n, true);
         System.out.println("Either way, The sum is " + theOutput);
     }
@@ -22,7 +23,7 @@ public class Chapter1 extends mwgMethods {
                 for(int i = 1; i <= n - 1; i++) System.out.print(i + " + ");
             }
             System.out.printf("%d = %d\n", n, returnValue);
-            System.out.printf("Or ((%d x (%d + 1)) / 2) = ", n, n, returnValue);
+            System.out.printf("Or ((%d x (%d + 1)) / 2) = %d\n", n, n, returnValue);
         }
         return returnValue;
     }
@@ -38,6 +39,7 @@ public class Chapter1 extends mwgMethods {
         }
         System.out.print("Now enter a Natural Number, n = ");
         n = readInt(1);
+        clearConsole();
         theOutput = the12(x, n, true);
         System.out.println("Either way, The sum is " + theOutput);
     }
@@ -62,6 +64,7 @@ public class Chapter1 extends mwgMethods {
         k = readInt(1);
         System.out.printf("Enter another Natural Number. We'll find this number to base %d, n = ", k);
         n = readInt(1);
+        clearConsole();
         theOutput = the13(k, n, true);
         System.out.println("The result is " + arrToString(theOutput));
     }

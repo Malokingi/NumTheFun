@@ -11,6 +11,7 @@ public class Chapter2 extends mwgMethods {
         j = readInt();
         System.out.printf("Okay. Enter a Natural Number. It will serve as %d's divisor, k = ", j);
         k = readInt(1);
+        clearConsole();
         theOutput = longDivide(k, j, true);
         System.out.println("The result is " + arrToString(theOutput));
         System.out.printf("In other words, %d = (%d x %d) + %d\n", j, theOutput[0], k, theOutput[1]);
@@ -37,6 +38,7 @@ public class Chapter2 extends mwgMethods {
         a = readInt();
         System.out.print("Enter another Integer, b = ");
         b = readInt();
+        clearConsole();
         theOutput = gcd(a, b, true);
         System.out.println("The result is " + theOutput + ". Pull out a calculator and check, if you don't believe me.");
     }
@@ -62,6 +64,7 @@ public class Chapter2 extends mwgMethods {
         b = readInt();
         System.out.print("Enter a third Integer, c = ");
         c = readInt();
+        clearConsole();
         theOutput = the23(a, b, c, true);
         if (theOutput[0]) {
             System.out.printf("\nIt looks like, indeed, gcd(%d, %d) = 1.\n", a, c);
@@ -95,13 +98,14 @@ public class Chapter2 extends mwgMethods {
         c = readInt();
         d = gcd(a, b, false);
         if (longDivide(d, c, false)[1] == 0) {
+            clearConsole();
             theOutput = the24(a, b, c, true);
             if ((a * theOutput[0] + b * theOutput[1]) == c) {
                 System.out.printf("There's good news. All the assumptions were met, so I found a solution: (x, y) = (%d, %d)\n", theOutput[0], theOutput[1]);
                 System.out.printf("\tSo, (%d x %d) + (%d x %d) = %d\n", a, theOutput[0], b, theOutput[1], c);
                 System.out.printf("\tThat is, (%d) + (%d) = %d\n", a * theOutput[0], b * theOutput[1], c);
                 System.out.println("Furthermore, all conceivable solutions for this equation take the form of:");
-                System.out.printf("\t(x, y) = (%d + (t x %d), (%d + (t x %d)))\nfor any integer, t.\n", theOutput[0], b / d, theOutput[1], a / d);
+                System.out.printf("\t(x, y) = ((%d + (t x %d)), (%d - (t x %d)))\nfor any integer, t.\n", theOutput[0], b / d, theOutput[1], a / d);
             }else{
                 System.out.println("It looks like, although the solution must exist, It's too complicated for me to find at my current skill level.");
             }
@@ -145,7 +149,9 @@ public class Chapter2 extends mwgMethods {
         int[] theOutput;
         System.out.print("Enter a Natural Number, n = ");
         n = readInt(1);
+        clearConsole();
         theOutput = the25(n, true);
+        if (theOutput.length == 1) System.out.print("\nHey! you found a Prime Number!");
         System.out.printf("\nThe Prime Factorization of %d is %s", n, arrToString(theOutput));
         //System.out.println(arrToString(theOutput));
     }
@@ -172,7 +178,7 @@ public class Chapter2 extends mwgMethods {
                 }
             }
             if (!pFound) {
-                if(slow) System.out.printf("\nFound %d", i);
+                if(slow) System.out.printf("\nFound %d", number);
                 tempArr.add(number);
                 number = 0;
             }
