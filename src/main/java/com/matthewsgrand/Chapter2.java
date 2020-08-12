@@ -165,7 +165,7 @@ public class Chapter2 extends mwgMethods {
         while (number > 0) {
             maxFact = sqrtInt(number); // Calculating Maximum Possible Factor
             pFound = false;
-            System.out.printf("\nChecking:");
+            if(slow) System.out.printf("\nChecking:");
             for (int i = 2; i <= maxFact; i++) {
                 if (slow && ((Math.log((double) i)/Math.log(2.0)) % 1 == 0.0)) System.out.printf(" i = %d", i);
                 qAndR = longDivide(i, number, false);

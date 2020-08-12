@@ -6,7 +6,7 @@ For Given Integers, a, b, and c:
 
 has a solution if, and only if, gcd(a, b)|c.
 
-Furthermore, if (x[0], y[0]) is a solution of this equation, then the set of solutions of this equation consists of all Integer pairs, (x[i], y[i]) where, for any Integer, t:
+Furthermore, if (x[0], y[0]) is a solution of this equation, then the set of solutions of this equation consists of all Integer pairs, (x[i], y[i]) where, for any Integer t:
 
     x[i] = x[0] + t(b/d)
     y[i] = y[0] - t(a/d)
