@@ -10,7 +10,7 @@ public class Chapter1 extends mwgMethods {
         theOutput = the11(n, true);
         System.out.println("Either way, The sum is " + theOutput);
     }
-    private static int the11(final int n, final boolean slow) {
+    protected static int the11(final int n, final boolean slow) {
         int returnValue;
         if (n % 2 == 0) returnValue = ((n / 2) * (n + 1));
         else returnValue = (n * ((n + 1) / 2));
@@ -37,13 +37,14 @@ public class Chapter1 extends mwgMethods {
             System.out.print("x must != 1. Please try again x = ");
             x = readInt();
         }
+        // Add limit here
         System.out.print("Now enter a Natural Number, n = ");
         n = readInt(1);
         clearConsole();
         theOutput = the12(x, n, true);
         System.out.println("Either way, The sum is " + theOutput);
     }
-    private static int the12(final int x, final int n, final boolean slow) {
+    protected static int the12(final int x, final int n, final boolean slow) {
         final int returnValue =  ((pow(x, n)) - 1) / (x - 1);
         if (slow) {
             System.out.println("\nIf you have enough free time, you can add:");
@@ -68,7 +69,7 @@ public class Chapter1 extends mwgMethods {
         theOutput = the13(k, n, true);
         System.out.println("The result is " + arrToString(theOutput));
     }
-    private static int[] the13(final int k, final int n, final boolean slow) {
+    protected static int[] the13(final int k, final int n, final boolean slow) {
         int[] returnValue;
         int numRemaining = n;
         int retArrSize;

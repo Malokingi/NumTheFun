@@ -11,8 +11,8 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 - [x] Maven 3
   - [x] Setup
   - [x] Manage (Clean, Compile, etc.)
-- [ ] JUnit 5
-  - [ ] Testing
+- [x] JUnit 5
+  - [x] Testing
 - [x] Git
   - [x] Init
   - [x] General Version control (commit, push, etc.)

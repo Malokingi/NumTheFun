@@ -16,7 +16,7 @@ public class Chapter2 extends mwgMethods {
         System.out.println("The result is " + arrToString(theOutput));
         System.out.printf("In other words, %d = (%d x %d) + %d\n", j, theOutput[0], k, theOutput[1]);
     }
-    private static int[] longDivide(final int k, final int j, final boolean slow) {
+    protected static int[] longDivide(final int k, final int j, final boolean slow) {
         if (slow) System.out.printf("\nNow finding (q, r) for (j, k) = (%d, %d)\n", j, k);
         int[] returnValue = new int[2];
         int q;
@@ -42,7 +42,7 @@ public class Chapter2 extends mwgMethods {
         theOutput = gcd(a, b, true);
         System.out.println("The result is " + theOutput + ". Pull out a calculator and check, if you don't believe me.");
     }
-    private static int gcd(final int a, final int b, final boolean slow) {
+    protected static int gcd(final int a, final int b, final boolean slow) {
         if (slow) System.out.printf("\nNow finding gcd(%d, %d)\n", a, b);
         int returnValue = 0;
         for (int i = 1; (i <= a) && (i <= b); i++) {
@@ -78,7 +78,7 @@ public class Chapter2 extends mwgMethods {
             System.out.printf("Oh, gcd(%d, %d) != 1. That was a waste of time.\n", a, c);
         }
     }
-    private static boolean[] the23(final int a, final int b, final int c, final boolean slow) {
+    protected static boolean[] the23(final int a, final int b, final int c, final boolean slow) {
         boolean[] returnValue = {false, false};
         if (gcd(a, c, slow) == 1) returnValue[0] = true;
         if (longDivide(c, a * b, slow)[1] == 0) returnValue[1] = true;
@@ -113,7 +113,7 @@ public class Chapter2 extends mwgMethods {
             System.out.printf("It looks like gcd(%d, %d) = %d and %d !| %d. So there's no point in going forward.\n", a, b, d, d, c);
         }
     }
-    private static int[] the24(final int a, final int b, final int c, final boolean slow) {
+    protected static int[] the24(final int a, final int b, final int c, final boolean slow) {
         int[] returnValue = new int[2];
         final int d = gcd(a, b, false);
         int magnitude = 0;
@@ -155,7 +155,7 @@ public class Chapter2 extends mwgMethods {
         System.out.printf("\nThe Prime Factorization of %d is %s", n, arrToString(theOutput));
         //System.out.println(arrToString(theOutput));
     }
-    private static int[] the25(final int n, final boolean slow) {
+    protected static int[] the25(final int n, final boolean slow) {
         int[] returnValue;
         ArrayList<Integer> tempArr = new ArrayList<Integer>();
         int number = n;

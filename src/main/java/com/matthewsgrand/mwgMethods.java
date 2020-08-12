@@ -23,12 +23,9 @@ public class mwgMethods {
         return r + arr[arr.length - 1] + " }";
     }
 
-    public static int sqrtInt(int i) {
-        return (int) Math.floor(Math.sqrt((double) i));
-    }
+    public static int sqrtInt(int i) { return ((int) Math.floor(Math.sqrt((double) i))); }
 
-    public static int readInt(int... args) { // gets the next Int input from user, with the option to specify min and
-                                             // max.
+    public static int readInt(int... args) { // gets the next Int input, with the option to specify min and max.
         int r = 0;
         int min = -2147483648;
         int max = 2147483647;
@@ -73,7 +70,7 @@ public class mwgMethods {
         try {
             Scanner printFile = new Scanner(new FileInputStream(fileName));
             System.out.println();
-            while (printFile.hasNext()){
+            while (printFile.hasNext()) {
                 System.out.println(printFile.nextLine());
             }
             printFile.close();
