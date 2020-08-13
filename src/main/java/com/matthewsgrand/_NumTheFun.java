@@ -4,13 +4,10 @@ public final class _NumTheFun extends mwgMethods {
     private _NumTheFun() {
     }
 
-    //final static TempFakeDatabase fakeDB = new TempFakeDatabase();
-
     public static void main(final String[] args) {
         boolean loop = true;
         String userInput;
         clearConsole();
-        //System.out.print(fakeDB.getIntroDialogue("Main"));
         readFile("dia/intro.txt");
         while (loop) {
             readFile("dia/topMenu.txt");

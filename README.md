@@ -21,6 +21,10 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 
 ## Features
 - [x] Top Menu
+- [ ] Add a Distionary
+  - [ ] Build most of it (with predetermined content)
+  - [ ] Look Up Words
+  - [ ] Add New Words
 - [x] Chapter 1
   - [x] Theorem 1-1 = Sum of the first N Integers.
     - [x] Educational Dialogue
