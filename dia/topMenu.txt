@@ -11,4 +11,5 @@ What do you want to do?
     (24): Theorem 2-4 = Linear Diophantine Equation.
     (25): Theorem 2-5 = Fundamental Theorem of Arithmetic.
 
+    (99): Explore Glossary.
     (00): Quit Program.

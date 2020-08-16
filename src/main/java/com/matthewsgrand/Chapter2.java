@@ -167,7 +167,7 @@ public class Chapter2 extends mwgMethods {
             pFound = false;
             if(slow) System.out.printf("\nChecking:");
             for (int i = 2; i <= maxFact; i++) {
-                if (slow && ((Math.log((double) i)/Math.log(2.0)) % 1 == 0.0)) System.out.printf(" i = %d", i);
+                if (slow && ((Math.log((double) i)/Math.log(2.0)) % 1 == 0.0)) System.out.printf(" i = %d...", i);
                 qAndR = longDivide(i, number, false);
                 if (qAndR[1] == 0) {
                     if(slow) System.out.printf("\nFound %d", i);

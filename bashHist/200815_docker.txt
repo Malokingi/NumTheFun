@@ -1,0 +1,217 @@
+    1  help
+    2  help
+    3  exit
+    4  dir
+    5  cd C\code
+    6  mkdir hello-maven
+    7  cd hello-maven/
+    8  ls
+    9  notepad pom.xml
+   10  ls
+   11  mvn verify
+   12  ls
+   13  notepad pom.xml
+   14  mvn verify
+   15  ls ../.m2
+   16  ls ../.m2/repository/
+   17  notepad pom.xml
+   18  ls ../.m2/repository/junit/
+   19  ls ../.m2/repository/junit/junit/
+   20  notepad pom.xml
+   21  mvn verify
+   22  notepad pom.xml
+   23  mvn verify
+   24  ls
+   25  ls target/
+   26  mkdir src/main.java
+   27  mkdir -p src/main.java
+   28  notepad src/main/java
+   29  mkdir -p src/main/java
+   30  notepad src/main/java/Hello.java
+   31  mvn compile
+   32  notepad src/main/java/Hello.java
+   33  notepad pom.xml
+   34  mvn package
+   35  notepad src/main/java/Hello.java
+   36  mvn compile
+   37  mvn compile
+   38  mvn ?
+   39  mvn -?
+   40  git init
+   41  ls
+   42  ls -a
+   43  ls .git/
+   44  git status 
+   45  git push
+   46  git add pom.xml src
+   47  git status 
+   48  git add target/
+   49  git status 
+   50  git commit -m "first commit"
+   51  git checkout
+   52  Function Key 7
+   53  cd ..
+   54  ls
+   55  doskey /history
+   56  /history
+   57  history
+   58  ls
+   59  history > Documents/gitbashHistory/20200804.txt
+   60  notepad history > Documents/gitbashHistory/20200804.txt
+   61  notepad Documents/gitbashHistory/20200804.txt
+   62  notepad history > Documents/gitbashHistory/20200804.txt
+   63  mkdir Documents/gitbashHistory/
+   64  mkdir -p Documents/gitbashHistory/
+   65  ls Documents/
+   66  ls Documents/Coding\ Study/
+   67  mkdir Documents/Coding\ Study/gitbashHistory
+   68  mkdir -p Documents/Coding\ Study/gitbashHistory
+   69  mkdir -p Documents/Coding\ Study/gitbashHistory
+   70  history
+   71  history > Documents/Coding\ Study/gitbashHistory/20200804.txt
+   72  history > Documents/Coding\ Study/gitbashHistory/20200804.txt
+   73  notepad Documents/Coding\ Study/gitbashHistory/20200804.txt
+   74  history > Documents/CodingStudy/gitbashHistory/20200804.txt
+   75  git commit -m "first commit"
+   76  choco install vscode
+   77  sudo
+   78  hostory
+   79  history
+   80  history > Documents/CodingStudy/gitbashHistory/20200804.txt
+   81  exit
+   82   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+   83  exit
+   84   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+   85  history
+   86  history > Documents/CodingStudy/gitbashHistory/200804.txt
+   87  history > proj-0/bashHist/200804.txt 
+   88  exit
+   89  history
+   90  git commit "first commit"
+   91  cd proj-0/
+   92  git commit "first commit"
+   93  git commit -m "first commit"
+   94  git status
+   95  git add .
+   96  git status
+   97  git push
+   98  git pull
+   99  git push
+  100  history
+  101  history > bashHist/200804.txt 
+  102  exit
+  103  curl -v localhost:8080
+  104  curl -v google.com
+  105  curl -v https//google.com
+  106  curl -v https://www.google.com
+  107  echo "That last one worked"
+  108  history
+  109  exit
+  110   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  111  exit
+  112   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  113  exit
+  114   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  115  exit
+  116   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  117  exit
+  118   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  119  exit
+  120   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  121  exit
+  122   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  123  exit
+  124   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  125  exit
+  126   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  127  exit
+  128   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  129  exit
+  130   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  131  exit
+  132   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  133  exit
+  134   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  135  exit
+  136   c:\\Users\\Magne\\.vscode\\extensions\\vscjava.vscode-java-debug-0.27.1\\scripts\\launcher.bat "C:\\Program Files\\OpenJDK\\openjdk-11u-11.0.3+7\\bin\\java.exe" -Dfile.encoding=UTF-8 -cp C:\\Users\\Magne\\Documents\\CodingStudy\\Project0\\proj-0\\target\\classes com.matthewsgrand.NumTheFun 
+  137  exit
+  138  exit
+  139  cd proj-0/
+  140  mvn clean compile exece:java
+  141  mvn exec:java
+  142  docker --version
+  143  postgresql --version
+  144  postgres --version
+  145  mvn clean compile exec:java
+  146  exit
+  147  cd proj-0/db/
+  148  docker build -t glossary .
+  149  docker run --rm -p 5432:5432 glossary
+  150  docker run --rm -p 5432:5432 glossary
+  151  docker run --help
+  152  docker --help
+  153  docker rm glossary
+  154  docker run --rm -p 5432:5432 glossary
+  155  exit
+  156  cd proj-0/db/
+  157  docker build -t postgres .
+  158  docker run --help
+  159  docker --rm 5432:5432 postgres
+  160  docker -p --rm 5432:5432 postgres
+  161  docker run --rm 5432:5432 postgres
+  162  docker run --rm -p 5432:5432 postgres
+  163  docker build -t gloss .
+  164  docker run --rm -p 5432:5432 gloss
+  165  docker run --name gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d postgres
+  166  docker run --name gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d gloss
+  167  docker run --name gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d gloss
+  168  docker stop gloss
+  169  docker run --name gloss -e POSTGRES_PASSWORD=hello-postgres --rm -p 5432:5432 -d gloss
+  170  docker run --name gloss -e POSTGRES_PASSWORD=hello-postgres --rm -p 5432:5432 -d gloss
+  171  docker ps
+  172  docker exec -it postgres-docker bash
+  173  docker exec -it gloss bash
+  174  docker exec -it gloss postgres -uhello-postgres -p
+  175  docker exec -it gloss postgres -uroot -p
+  176  docker exec -it gloss bash
+  177  docker stop gloss
+  178  docker run --name gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d gloss
+  179  docker exec -it gloss bash
+  180  docker exec -it gloss psql
+  181  docker exec -it gloss psql --help
+  182  docker exec -it gloss psql -h localhost -p 5432
+  183  docker exec -it gloss psql -h localhost -p 5432 -U username=hello-postgres
+  184  docker exec -it gloss psql -h localhost -p 5432 -U hello-postgres
+  185  clear
+  186  docker exec -it gloss psql -h localhost -p 5432 -U hello-postgres
+  187  history
+  188  docker exec -it gloss psql -h localhost -p 5432 -U hello-postgres
+  189  docker stop gloss
+  190  docker exec -it gloss psql -h localhost -p 5432 -U hello-postgres
+  191  docker build -t cont_gloss .
+  192  docker run --?
+  193  docker run --help
+  194  docker run --name cont_run_gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d cont_run_gloss_d
+  195  docker run --name cont_run_gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d cont_gloss
+  196  docker exec -it cont_gloss psql -h localhost -p 5432 -U hello-postgres
+  197  docker exec -it cont_run_gloss psql -h localhost -p 5432 -U hello-postgres
+  198  docker stop cont_gloss
+  199  docker stop cont_run_gloss
+  200  docker build -t c_gloss
+  201  docker build -t c_gloss .
+  202  docker run --name c_gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d c_gloss --rm
+  203  docker run --name c_gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d c_gloss
+  204  docker run --name c_gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d c_gloss
+  205  docker exec -it cont_run_gloss psql -h localhost -p 5432 -U mwg
+  206  docker exec -it c_gloss psql -h localhost -p 5432 -U mwg
+  207  docker --help
+  208  docker kill c_gloss
+  209  rm c_gloss
+  210  docker rm c_gloss
+  211  docker run --name c_gloss -e POSTGRES_PASSWORD=hello-postgres -p 5432:5432 -d c_gloss
+  212  rm c_gloss
+  213  docker rm c_gloss
+  214  docker kill c_gloss
+  215  docker rm c_gloss
+  216  docker run --name c_gloss -p 5432:5432 -d c_gloss
+  217  history > ../bashHist/200815_docker.txt

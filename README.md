@@ -17,12 +17,13 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [x] Init
   - [x] General Version control (commit, push, etc.)
 - [ ] PostgreSQL 9+
-  - [ ] Get and/or set DB Info
+  - [x] Get DB Info
+  - [ ] Set DB Info
 
 ## Features
 - [x] Top Menu
-- [ ] Add a Distionary
-  - [ ] Build most of it (with predetermined content)
+- [ ] Add a Glossary
+  - [x] Build most of it (with predetermined content)
   - [ ] Look Up Words
   - [ ] Add New Words
 - [x] Chapter 1

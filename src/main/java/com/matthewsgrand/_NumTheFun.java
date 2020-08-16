@@ -13,7 +13,6 @@ public final class _NumTheFun extends mwgMethods {
             readFile("dia/topMenu.txt");
             System.out.print("\nWell, put in some input: ");
             userInput = scan.nextLine();
-
             switch (userInput) {
                 case "00":
                     System.out.println("You want to Quit? But you just got here... Goodbye.\n");
@@ -28,9 +27,14 @@ public final class _NumTheFun extends mwgMethods {
                 case "23":
                 case "24":
                 case "25":
+                    clearConsole();
                     theMenu(userInput);
                     break;
+                case "99":
+                    glossary.browse();
+                    break;
                 default:
+                    clearConsole();
                     System.err.println("Sorry, " + userInput + " isn't a valid Menu option.");
                     break;
             }
@@ -47,7 +51,6 @@ public final class _NumTheFun extends mwgMethods {
     private static void theMenu(final String the) {
         String userInput;
         boolean loop = true;
-        clearConsole();
         readFile("dia/the" + the + ".txt");
         while (loop) {
             readFile("dia/theMenu.txt");
@@ -59,7 +62,6 @@ public final class _NumTheFun extends mwgMethods {
                     readFile("dia/the" + the + ".txt");
                     break;
                 case "2":
-                    //clearConsole();
                     switch (the) {
                         case "11": Chapter1.learn11(); break;
                         case "12": Chapter1.learn12(); break;
