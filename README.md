@@ -63,6 +63,7 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 - [ ] Bonus Content // If I get done early
   - [ ] Add Proofs
   - [ ] Define more terms
+    
   - [ ] Account for Integer Limitations (use longs instead of ints)
   - [ ] Improve the pace of the output (wait())
   - [x] Input Data Validation

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import com.matthewsgrand.data.ConnectUtil;
 
-public class glossary {
+public class del_glossary {
     static Connection con = ConnectUtil.getConnection();
     static PreparedStatement smt;
 

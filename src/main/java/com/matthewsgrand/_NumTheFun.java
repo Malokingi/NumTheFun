@@ -1,8 +1,12 @@
 package com.matthewsgrand;
 
+import java.util.List;
+
+import com.matthewsgrand.data.Entry;
+import com.matthewsgrand.data.EntryRepository;
+
 public final class _NumTheFun extends mwgMethods {
-    private _NumTheFun() {
-    }
+    static EntryRepository er = new EntryRepository();
 
     public static void main(final String[] args) {
         boolean loop = true;
@@ -31,7 +35,16 @@ public final class _NumTheFun extends mwgMethods {
                     theMenu(userInput);
                     break;
                 case "99":
-                    glossary.browse();
+                    List<Entry> glossary = er.getAll();
+                    System.out.println("These are the words I know:\n");
+                    if (glossary.size() == 0) {
+                        System.out.println("\n\tI don't know anything :'-(");
+                    }else{
+                        for (int i = 0; i < glossary.size(); i++) {
+                            Entry e = glossary.get(i);
+                            System.out.print(e.word + " - ");
+                        }
+                    }
                     break;
                 default:
                     clearConsole();

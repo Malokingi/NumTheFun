@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EntryRepository implements Dao {
@@ -11,63 +12,71 @@ public class EntryRepository implements Dao {
     static PreparedStatement smt;
 
     @Override
-    public Object get(long id) {
-        if (con == null) return null;
+    public Entry get(final long id) {
+        if (con == null)
+            return null;
+        Entry ent = null;
         ResultSet res;
-        final String q = "SELECT word, def, example, anti_example FROM term_entry t join words w on word_id = w.id join defs d on def_id = d.id join examples e on example_id = e.id where t.id = " + id + ";";
+        final String select = "SELECT word, def, added_by, date_added ";
+        final String from = "FROM term_entry t join words w on word_id = w.id join defs d on def_id = d.id ";
+        final String where = "WHERE t.id = ?";
+        final String query = select + from + where + ";";
         try {
-            smt = con.prepareStatement(q);
-            // smt.setString(1, word);
+            smt = con.prepareStatement(query);
+            smt.setLong(1, id);
             res = smt.executeQuery();
-            System.out.println("Here are the terms I know:");
             while (res.next()) {
-                System.out.println(res.getString("word") + " - " + res.getString("def"));
+                ent = new Entry(id, res.getString("word"), res.getString("def"), res.getString("added_by"), res.getString("date_added"));
             }
         } catch (final SQLException e) {
-            System.err.println("Failed something SQL-related in glossary.");
+            System.err.println("Failed something SQL-related in EntryRepository:get().");
             e.printStackTrace();
         }
-        return null;
+        return ent;
     }
 
     @Override
-    public List getAll() {
-        if (con == null) return null;
+    public List<Entry> getAll() {
+        if (con == null)
+            return null;
+        int total_terms = 0;
         ResultSet res;
-        final String q = "SELECT word, def, example, anti_example FROM term_entry t join words w on word_id = w.id join defs d on def_id = d.id join examples e on example_id = e.id;";
+        final List<Entry> db = new ArrayList<Entry>();
+        final String select = "SELECT COUNT(DISTINCT id) ";
+        final String from = "FROM term_entry";
+        final String query = select + from + ";";
         try {
-            smt = con.prepareStatement(q);
-            // smt.setString(1, word);
+            smt = con.prepareStatement(query);
             res = smt.executeQuery();
-            System.out.println("Here are the terms I know:");
-            while (res.next()) {
-                System.out.printf("%s - %s", res.getString("word"), res.getString("def"));
-                System.out.printf("\tFor example, These are %s: %s", res.getString("example"));
-                System.out.printf("\tThese are not %s: %s", res.getString("anti_example"));
+            while (res.next()){
+                total_terms = res.getInt("count");
+            }
+            System.out.printf("Looks like there are %d unique terms in the Glossary.\n", total_terms);
+            for (int i = 0; i < total_terms; i++) {
+                db.add(get(i + 1));
             }
         } catch (final SQLException e) {
-            System.err.println("Failed something SQL-related in glossary.");
+            System.err.println("Failed something SQL-related in EntryRepository:get_all().");
             e.printStackTrace();
         }
-        return null;
+        return db;
     }
 
     @Override
-    public void save(Object g) {
+    public void save(final Object g) {
         // TODO Auto-generated method stub
 
     }
 
     @Override
-    public void update(Object g, String[] params) {
+    public void update(final Object g, final String[] params) {
         // TODO Auto-generated method stub
 
     }
 
     @Override
-    public void delete(Object g) {
+    public void delete(final Object g) {
         // TODO Auto-generated method stub
 
-    }
-    
+    }    
 }

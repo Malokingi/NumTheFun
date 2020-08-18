@@ -1,24 +1,19 @@
 package com.matthewsgrand.data;
 
 public class Entry {
-    static long entry_id;
+    static long entry_id; // happens to equal the foreigen keys at all times
     // static long word_id;
     // static long def_id;
-    // static long example_id;
-    // static String added_by;
-    // static String date_added;
-    static String word;
-    static String def;
-    static String example;
-    static String anti_example;
+    public String word;
+    public String def;
+    public String added_by;
+    public String date_added;
 
-    public Entry(long id, String w, String d, String e, String anti_e) {
+    public Entry(long id, String w, String d, String ab, String da) {
         entry_id = id;
         word = w;
         def = d;
-        example = e;
-        anti_example = anti_e;
+        added_by = ab;
+        date_added = da;
     }
-
-
 }
