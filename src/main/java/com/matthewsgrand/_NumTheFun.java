@@ -8,20 +8,30 @@ import java.util.concurrent.TimeUnit;
 import com.matthewsgrand.data.Entry;
 import com.matthewsgrand.data.EntryRepository;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public final class _NumTheFun extends mwgMethods {
+    private static Log log = null;
     static EntryRepository er = new EntryRepository();
     private static ExecutorService threadPool = Executors.newFixedThreadPool(10);
-
+    static {
+        System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$tF %1$tT] [%4$s] %5$s %n");
+        log = LogFactory.getLog(_NumTheFun.class);
+    }
     public static void main(final String[] args) {
+        clearConsole();
+        log.info("Entering Main()");
         boolean loop = true;
         String userInput;
         Runtime.getRuntime().addShutdownHook(new Thread(() -> shutdown()));
-        clearConsole();
         readFile("dia/intro.txt");
         while (loop) {
+            log.info("Deploying Main Menu");
             readFile("dia/topMenu.txt");
             System.out.print("\nWell, put in some input: ");
             userInput = scan.nextLine();
+            log.info("User put in " + userInput);
             switch (userInput) {
                 case "0":
                 case "00":
@@ -52,13 +62,14 @@ public final class _NumTheFun extends mwgMethods {
     }
 
     private static Object shutdown() {
+        log.error("shutting down");
         System.err.println("\n\tAsynchronous Shutdown Command detected!!\n");
         System.err.println("\n\tWoah! Woah! Woah! Let me shut down the scanner first at least! Jeez!\n");
         // scan.close(); // Does Java do this on its own when ^C is pressed?
         try {
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
-            System.err.println("Failed to pause for 3 seconds.");
+            System.err.println("Failed to pause for 1 second.");
             e.printStackTrace();
         }
         threadPool.shutdown();
@@ -72,6 +83,7 @@ public final class _NumTheFun extends mwgMethods {
         boolean loop = true;
         while (loop) {
             clearConsole();
+            log.info("Displaying Glossary");
             System.out.println("These are the words I know:\n");
             if (glossarySize == 0) {
                 System.out.println("\n\tI don't know anything :'-(");
@@ -117,6 +129,7 @@ public final class _NumTheFun extends mwgMethods {
             switch (userInput) {
                 case "1":
                     clearConsole();
+                    log.info("Displaying Theorem Dialogue");
                     readFile("dia/the" + the + ".txt");
                     break;
                 case "2":

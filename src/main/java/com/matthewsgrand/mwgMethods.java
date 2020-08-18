@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class mwgMethods {
     final static Scanner scan = new Scanner(System.in);
+    // final static java.util.logging.Logger logger = java.util.logging.Logger.getLogger(this.getClass().getName());
 
     public static int pow(int a, int b) { // a power function that doesn't need Doubles
         int r = 1;

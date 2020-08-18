@@ -25,5 +25,11 @@
       <artifactId>postgresql</artifactId>
       <version>42.2.14</version>
     </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+      <systemPath></systemPath>
+    </dependency>
   </dependencies>
 </project>
