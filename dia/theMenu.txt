@@ -2,5 +2,6 @@ Here are some options:
 
     (1): Learn about it.
     (2): Test it out.
+    (3): Lookup Word.
     
     (0): Return to Main Menu.

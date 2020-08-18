@@ -2,12 +2,12 @@
 Learn about and scruitnize a few basic Number Theory concepts up to and including The Fundamental Theorem of Arithmetic!
 
 ## Target tech stack
-- [ ] Java 8
+- [x] Java 8
   - [x] File I/O
     - [x] Takes User Input (from Command Line, for example)
     - [x] Takes File Input
   - [x] Collections API
-  - [ ] Concurrency
+  - [x] Concurrency
 - [x] Maven 3
   - [x] Setup
   - [x] Manage (Clean, Compile, etc.)
@@ -16,16 +16,13 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 - [x] Git
   - [x] Init
   - [x] General Version control (commit, push, etc.)
-- [ ] PostgreSQL 9+
+- [x] PostgreSQL 9+
   - [x] Get DB Info
-  - [ ] Set DB Info
 
 ## Features
 - [x] Top Menu
-- [ ] Add a Glossary
+- [x] Add a Glossary
   - [x] Build most of it (with predetermined content)
-  - [ ] Look Up Words
-  - [ ] Add New Words
 - [x] Chapter 1
   - [x] Theorem 1-1 = Sum of the first N Integers.
     - [x] Educational Dialogue
@@ -63,9 +60,10 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 - [ ] Bonus Content // If I get done early
   - [ ] Add Proofs
   - [ ] Define more terms
-    
   - [ ] Account for Integer Limitations (use longs instead of ints)
   - [ ] Improve the pace of the output (wait())
   - [x] Input Data Validation
   - [x] Make Theroem 2-4 return the smallest solution
   - [ ] Make longDivide() better or find some other way to test divisibility for large numbers
+  - [ ] Look Up Words
+  - [ ] Add New Words
