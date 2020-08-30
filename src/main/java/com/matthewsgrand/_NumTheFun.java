@@ -8,20 +8,15 @@ import java.util.concurrent.TimeUnit;
 import com.matthewsgrand.data.Entry;
 import com.matthewsgrand.data.EntryRepository;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
 public final class _NumTheFun extends mwgMethods {
-    private static Log log = null;
     static EntryRepository er = new EntryRepository();
+    private static final Logger log = Logger.getLogger(_NumTheFun.class);
     private static ExecutorService threadPool = Executors.newFixedThreadPool(10);
-    static {
-        System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$tF %1$tT] [%4$s] %5$s %n");
-        log = LogFactory.getLog(_NumTheFun.class);
-    }
     public static void main(final String[] args) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         clearConsole();
-        log.info("Entering Main()");
         boolean loop = true;
         String userInput;
         Runtime.getRuntime().addShutdownHook(new Thread(() -> shutdown()));
@@ -35,6 +30,7 @@ public final class _NumTheFun extends mwgMethods {
             switch (userInput) {
                 case "0":
                 case "00":
+                    log.fatal("shutting down correctly");
                     System.out.println("You want to Quit? But you just got here... Goodbye.\n");
                     loop = false;
                     scan.close();
@@ -59,10 +55,12 @@ public final class _NumTheFun extends mwgMethods {
                     break;
             }
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
 
     private static Object shutdown() {
-        log.error("shutting down");
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        log.fatal("shutting down suddenly");
         System.err.println("\n\tAsynchronous Shutdown Command detected!!\n");
         System.err.println("\n\tWoah! Woah! Woah! Let me shut down the scanner first at least! Jeez!\n");
         // scan.close(); // Does Java do this on its own when ^C is pressed?
@@ -73,10 +71,12 @@ public final class _NumTheFun extends mwgMethods {
             e.printStackTrace();
         }
         threadPool.shutdown();
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         return null;
     }
 
     private static void browseGlossary() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         List<Entry> glossary = er.getAll();
         int userInput;
         int glossarySize = glossary.size();
@@ -109,6 +109,7 @@ public final class _NumTheFun extends mwgMethods {
                 }
             }
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
 
     /**
@@ -119,6 +120,7 @@ public final class _NumTheFun extends mwgMethods {
      * @param the
      */
     private static void theMenu(final String the) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(the = " + the + ")");
         String userInput;
         boolean loop = true;
         readFile("dia/the" + the + ".txt");
@@ -159,5 +161,6 @@ public final class _NumTheFun extends mwgMethods {
                     break;
             }
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
 }

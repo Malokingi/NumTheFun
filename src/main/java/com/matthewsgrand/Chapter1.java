@@ -1,7 +1,14 @@
 package com.matthewsgrand;
 
+import org.apache.log4j.Logger;
+// import org.apache.commons.logging.Log;
+// import org.apache.commons.logging.LogFactory;
+
 public class Chapter1 extends mwgMethods {
+    // private static Log log = LogFactory.getLog(Chapter1.class);
+    private static final Logger log = Logger.getLogger(Chapter1.class);
     public static void learn11() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int n;
         int theOutput;
         System.out.print("Okay. Enter a Natural Number, n = ");
@@ -9,8 +16,10 @@ public class Chapter1 extends mwgMethods {
         clearConsole();
         theOutput = the11(n, true);
         System.out.println("Either way, The sum is " + theOutput);
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static int the11(final int n, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(n = " + n + ", slow = " + ((slow) ? "true" : "false") +")");
         int returnValue;
         if (n % 2 == 0) returnValue = ((n / 2) * (n + 1));
         else returnValue = (n * ((n + 1) / 2));
@@ -25,9 +34,11 @@ public class Chapter1 extends mwgMethods {
             System.out.printf("%d = %d\n", n, returnValue);
             System.out.printf("Or ((%d x (%d + 1)) / 2) = %d\n", n, n, returnValue);
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue = " + returnValue + ")");
         return returnValue;
     }
     public static void learn12() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int x;
         int n;
         int theOutput;
@@ -43,8 +54,10 @@ public class Chapter1 extends mwgMethods {
         clearConsole();
         theOutput = the12(x, n, true);
         System.out.println("Either way, The sum is " + theOutput);
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static int the12(final int x, final int n, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(x = " + x + ", n = " + n + ", slow = " + ((slow) ? "true" : "false") +")");
         final int returnValue =  ((pow(x, n)) - 1) / (x - 1);
         if (slow) {
             System.out.println("\nIf you have enough free time, you can add:");
@@ -55,9 +68,11 @@ public class Chapter1 extends mwgMethods {
             System.out.printf("Or:\n ((%d ^ %d) - 1) / (%d - 1) =\n", x, n, x);
             System.out.printf("(%d) / (%d) = %d\n", pow(x, n) - 1, x - 1, returnValue);
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue = " + returnValue + ")");
         return returnValue;
     }
     public static void learn13() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int k;
         int n;
         int[] theOutput;
@@ -68,8 +83,10 @@ public class Chapter1 extends mwgMethods {
         clearConsole();
         theOutput = the13(k, n, true);
         System.out.println("The result is " + arrToString(theOutput));
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static int[] the13(final int k, final int n, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(k = " + k + ", n = " + n + ", slow = " + ((slow) ? "true" : "false") +")");
         int[] returnValue;
         int numRemaining = n;
         int retArrSize;
@@ -84,6 +101,7 @@ public class Chapter1 extends mwgMethods {
             if (slow) System.out.printf("Then we then find that the largest a[%d] can be is %d since %d * %d > %d\n", i, returnValue[i], returnValue[i] + 1, pow(k, powOfK), numRemaining);
             numRemaining -= returnValue[i] * pow(k, powOfK); // Prep the numRemain for the next a[i] value
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue.length = " + returnValue.length + ")");
         return returnValue;
     }
 }

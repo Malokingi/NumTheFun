@@ -65,5 +65,9 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [x] Input Data Validation
   - [x] Make Theroem 2-4 return the smallest solution
   - [ ] Make longDivide() better or find some other way to test divisibility for large numbers
-  - [ ] Look Up Words
-  - [ ] Add New Words
+  - [x] Look Up Words
+  
+  From the main dir, run with: (this will delete the log, and do maven clean, compile, then exec:java)
+  ```
+  ./run
+  ```

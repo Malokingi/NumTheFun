@@ -1,9 +1,15 @@
 package com.matthewsgrand;
 
 import java.util.ArrayList;
+import org.apache.log4j.Logger;
+// import org.apache.commons.logging.Log;
+// import org.apache.commons.logging.LogFactory;
 
 public class Chapter2 extends mwgMethods {
+    // private static Log log = LogFactory.getLog(Chapter2.class);
+    private static final Logger log = Logger.getLogger(Chapter2.class);
     public static void learn21() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int k;
         int j;
         int[] theOutput;
@@ -15,8 +21,10 @@ public class Chapter2 extends mwgMethods {
         theOutput = longDivide(k, j, true);
         System.out.println("The result is " + arrToString(theOutput));
         System.out.printf("In other words, %d = (%d x %d) + %d\n", j, theOutput[0], k, theOutput[1]);
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static int[] longDivide(final int k, final int j, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(k = " + k + ", j = " + j + ", slow = " + ((slow) ? "true" : "false") +")");
         if (slow) System.out.printf("\nNow finding (q, r) for (j, k) = (%d, %d)\n", j, k);
         int[] returnValue = new int[2];
         int q;
@@ -28,9 +36,11 @@ public class Chapter2 extends mwgMethods {
         if (slow) System.out.printf("This means r = %d which is (%d - %d)\n", r, j, q * k);
         returnValue[0] = q;
         returnValue[1] = r;
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(q = " + returnValue[0] + ", j = " + returnValue[1] + ")");
         return returnValue;
     }
     public static void learn22() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int a;
         int b;
         int theOutput;
@@ -41,8 +51,10 @@ public class Chapter2 extends mwgMethods {
         clearConsole();
         theOutput = gcd(a, b, true);
         System.out.println("The result is " + theOutput + ". Pull out a calculator and check, if you don't believe me.");
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static int gcd(final int a, final int b, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(a = " + a + ", b = " + b + ", slow = " + ((slow) ? "true" : "false") +")");
         if (slow) System.out.printf("\nNow finding gcd(%d, %d)\n", a, b);
         int returnValue = 0;
         for (int i = 1; (i <= a) && (i <= b); i++) {
@@ -51,9 +63,11 @@ public class Chapter2 extends mwgMethods {
                 returnValue = i;
             }
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue = " + returnValue + ")");
         return returnValue;
     }
     public static void learn23() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int a;
         int b;
         int c;
@@ -77,14 +91,18 @@ public class Chapter2 extends mwgMethods {
         }else{
             System.out.printf("Oh, gcd(%d, %d) != 1. That was a waste of time.\n", a, c);
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static boolean[] the23(final int a, final int b, final int c, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(a = " + a + ", b = " + b + ", c = " + c + ", slow = " + ((slow) ? "true" : "false") +")");
         boolean[] returnValue = {false, false};
         if (gcd(a, c, slow) == 1) returnValue[0] = true;
         if (longDivide(c, a * b, slow)[1] == 0) returnValue[1] = true;
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         return returnValue;
     }
     public static void learn24() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int a;
         int b;
         int c;
@@ -112,8 +130,10 @@ public class Chapter2 extends mwgMethods {
         }else{
             System.out.printf("It looks like gcd(%d, %d) = %d and %d !| %d. So there's no point in going forward.\n", a, b, d, d, c);
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
     protected static int[] the24(final int a, final int b, final int c, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(a = " + a + ", b = " + b + ", c = " + c + ", slow = " + ((slow) ? "true" : "false") +")");
         int[] returnValue = new int[2];
         final int d = gcd(a, b, false);
         int magnitude = 0;
@@ -142,9 +162,11 @@ public class Chapter2 extends mwgMethods {
         }else{
             System.err.printf("%d !| %d, so there are no solutions.\n", d, c);
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue.length = " + returnValue.length + ")");
         return returnValue;
     }
     public static void learn25() {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int n;
         int[] theOutput;
         System.out.print("Enter a Natural Number, n = ");
@@ -153,9 +175,11 @@ public class Chapter2 extends mwgMethods {
         theOutput = the25(n, true);
         if (theOutput.length == 1) System.out.print("\nHey! you found a Prime Number!");
         System.out.printf("\nThe Prime Factorization of %d is %s", n, arrToString(theOutput));
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         //System.out.println(arrToString(theOutput));
     }
     protected static int[] the25(final int n, final boolean slow) {
+        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(n = " + n + ", slow = " + ((slow) ? "true" : "false") +")");
         int[] returnValue;
         ArrayList<Integer> tempArr = new ArrayList<Integer>();
         int number = n;
@@ -187,6 +211,7 @@ public class Chapter2 extends mwgMethods {
         for (int i = 0; i < returnValue.length; i++) {
             returnValue[i] = tempArr.remove(0);
         }
+        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue.length = " + returnValue.length + ")");
         return returnValue;
     }
 }
