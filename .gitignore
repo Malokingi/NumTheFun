@@ -29,3 +29,6 @@ buildNumber.properties
 .gitattributes
 .travis.yml
 .vscode/
+
+# More
+app.log
