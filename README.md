@@ -19,6 +19,10 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
 - [x] PostgreSQL 9+
   - [x] Get DB Info
 
+## Extra Tech Stack
+- [ ] Jenkins
+  - [ ] Auto builds in Jenkins when a new commit is pushed.
+
 ## Features
 - [x] Top Menu
 - [x] Add a Glossary
