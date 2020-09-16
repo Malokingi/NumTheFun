@@ -20,8 +20,8 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   - [x] Get DB Info
 
 ## Extra Tech Stack
-- [ ] Jenkins
-  - [ ] Auto builds in Jenkins when a new commit is pushed.
+- [x] Jenkins
+  - [x] Auto builds in Jenkins when a new commit is pushed.
 
 ## Features
 - [x] Top Menu
