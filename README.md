@@ -61,7 +61,8 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
     - [x] Educational Dialogue
     - [x] User Test Loop
     - [x] Non-User Version
-- [ ] Bonus Content // If I get done early
+
+## Extra Features
   - [ ] Add Proofs
   - [ ] Define more terms
   - [ ] Account for Integer Limitations (use longs instead of ints)
