@@ -22,7 +22,7 @@ public final class _NumTheFun extends mwgMethods {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> shutdown()));
         readFile("dia/intro.txt");
         while (loop) {
-            log.info("Deploying Main Menu");
+            log.info("Deploying Main_Menu");
             readFile("dia/topMenu.txt");
             System.out.print("\nWell, put in some input: ");
             userInput = scan.nextLine();

@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 
 public class mwgMethods {
     final static Scanner scan = new Scanner(System.in);
-    final static boolean CLEAR_CONSOLE_ACTIVE = true;
+    final static boolean CLEAR_CONSOLE_ACTIVE = false;
     private static final Logger log = Logger.getLogger(mwgMethods.class);
 
     public static int pow(int a, int b) { // a power function that doesn't need Doubles
