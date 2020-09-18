@@ -77,4 +77,4 @@ Learn about and scruitnize a few basic Number Theory concepts up to and includin
   ./run
   ```
 
-  Today is 2020/09/18 08:47
+  Today is 2020/09/18 10:11
