@@ -6,8 +6,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'git pull https://github.com/Malokingi/NumTheFun'
-                sh 'cd NumTheFun'
                 echo 'Building . . .' 
                 sh 'mvn clean compile'
             }
