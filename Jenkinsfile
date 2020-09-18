@@ -1,32 +1,39 @@
 pipeline {
-    agent any
-
+    agent any 
     tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "Maven 3"
+        maven 'maven3'
     }
-
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/200803-java-devops/prog-0-mwg'
-
-                // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
-
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh 'git pull https://github.com/Malokingi/NumTheFun'
+                sh 'cd NumTheFun'
+                echo 'Building . . .' 
+                sh 'mvn clean compile'
             }
-
-            post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing . . .'
+                sh 'mvn test'
+                sh 'mvn verify'
             }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying . . .'
+                //sh kubectl apply -f Servicefile.yaml
+                //sh kubectl apply -f Deploymentfile.yaml
+                sh 'mvn package'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Your deployment is ready and it built fine'
+        }
+        failure {
+            echo 'Your deployment was unsuccessful'
         }
     }
 }
