@@ -17,14 +17,14 @@ pipeline {
                 sh 'mvn verify'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying . . .'
+        //stage('Deploy') {
+            //steps {
+                //echo 'Deploying . . .'
                 //sh kubectl apply -f Servicefile.yaml
                 //sh kubectl apply -f Deploymentfile.yaml
-                sh 'mvn package'
-            }
-        }
+                //sh 'mvn package'
+            //}
+        //}
     }
     post {
         success {
