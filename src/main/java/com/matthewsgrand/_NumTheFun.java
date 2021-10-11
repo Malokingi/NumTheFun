@@ -8,29 +8,29 @@ import java.util.concurrent.TimeUnit;
 import com.matthewsgrand.data.Entry;
 import com.matthewsgrand.data.EntryRepository;
 
-import org.apache.log4j.Logger;
+// import org.apache.log4j.Logger;
 
 public final class _NumTheFun extends mwgMethods {
     static EntryRepository er = new EntryRepository();
-    private static final Logger log = Logger.getLogger(_NumTheFun.class);
+    // private static final Logger log = Logger.getLogger(_NumTheFun.class);
     private static ExecutorService threadPool = Executors.newFixedThreadPool(10);
     public static void main(final String[] args) {
-        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         clearConsole();
         boolean loop = true;
         String userInput;
         Runtime.getRuntime().addShutdownHook(new Thread(() -> shutdown()));
         readFile("dia/intro.txt");
         while (loop) {
-            log.info("Deploying Main_Menu");
+            // log.info("Deploying Main_Menu");
             readFile("dia/topMenu.txt");
             System.out.print("\nWell, put in some input: ");
             userInput = scan.nextLine();
-            log.info("User put in " + userInput);
+            // log.info("User put in " + userInput);
             switch (userInput) {
                 case "0":
                 case "00":
-                    log.fatal("shutting down correctly");
+                    // log.fatal("shutting down correctly");
                     System.out.println("You want to Quit? But you just got here... Goodbye.\n");
                     loop = false;
                     scan.close();
@@ -55,12 +55,12 @@ public final class _NumTheFun extends mwgMethods {
                     break;
             }
         }
-        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
 
     private static Object shutdown() {
-        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
-        log.fatal("shutting down suddenly");
+        // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.fatal("shutting down suddenly");
         System.err.println("\n\tAsynchronous Shutdown Command detected!!\n");
         System.err.println("\n\tWoah! Woah! Woah! Let me shut down the scanner first at least! Jeez!\n");
         // scan.close(); // Does Java do this on its own when ^C is pressed?
@@ -71,19 +71,19 @@ public final class _NumTheFun extends mwgMethods {
             e.printStackTrace();
         }
         threadPool.shutdown();
-        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         return null;
     }
 
     private static void browseGlossary() {
-        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         List<Entry> glossary = er.getAll();
         int userInput;
         int glossarySize = glossary.size();
         boolean loop = true;
         while (loop) {
             clearConsole();
-            log.info("Displaying Glossary");
+            // log.info("Displaying Glossary");
             System.out.println("These are the words I know:\n");
             if (glossarySize == 0) {
                 System.out.println("\n\tI don't know anything :'-(");
@@ -109,7 +109,7 @@ public final class _NumTheFun extends mwgMethods {
                 }
             }
         }
-        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
 
     /**
@@ -120,7 +120,7 @@ public final class _NumTheFun extends mwgMethods {
      * @param the
      */
     private static void theMenu(final String the) {
-        log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(the = " + the + ")");
+        // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "(the = " + the + ")");
         String userInput;
         boolean loop = true;
         readFile("dia/the" + the + ".txt");
@@ -131,7 +131,7 @@ public final class _NumTheFun extends mwgMethods {
             switch (userInput) {
                 case "1":
                     clearConsole();
-                    log.info("Displaying Theorem Dialogue");
+                    // log.info("Displaying Theorem Dialogue");
                     readFile("dia/the" + the + ".txt");
                     break;
                 case "2":
@@ -161,6 +161,6 @@ public final class _NumTheFun extends mwgMethods {
                     break;
             }
         }
-        log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
+        // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
     }
 }
