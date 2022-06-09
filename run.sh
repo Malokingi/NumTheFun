@@ -1,5 +1,5 @@
 #!/bin/bash
 
 clear
-rm app.log
-mvn clean compile exec:java
+rm *.log
+mvn clean compile exec:java 2> err.log

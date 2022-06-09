@@ -7,7 +7,7 @@ package com.matthewsgrand;
 public class Chapter1 extends mwgMethods {
     // private static Log log = LogFactory.getLog(Chapter1.class);
     // private static final Logger log = Logger.getLogger(Chapter1.class);
-    public static void learn11() {
+    public static void learn1() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int n;
         int theOutput;
@@ -37,7 +37,7 @@ public class Chapter1 extends mwgMethods {
         // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue = " + returnValue + ")");
         return returnValue;
     }
-    public static void learn12() {
+    public static void learn2() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int x;
         int n;
@@ -71,7 +71,7 @@ public class Chapter1 extends mwgMethods {
         // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue = " + returnValue + ")");
         return returnValue;
     }
-    public static void learn13() {
+    public static void learn3() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int k;
         int n;

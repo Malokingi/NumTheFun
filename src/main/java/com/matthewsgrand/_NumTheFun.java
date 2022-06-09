@@ -136,14 +136,14 @@ public final class _NumTheFun extends mwgMethods {
                     break;
                 case "2":
                     switch (the) {
-                        case "11": Chapter1.learn11(); break;
-                        case "12": Chapter1.learn12(); break;
-                        case "13": Chapter1.learn13(); break;
-                        case "21": Chapter2.learn21(); break;
-                        case "22": Chapter2.learn22(); break;
-                        case "23": Chapter2.learn23(); break;
-                        case "24": Chapter2.learn24(); break;
-                        case "25": Chapter2.learn25(); break;
+                        case "11": Chapter1.learn1(); break;
+                        case "12": Chapter1.learn2(); break;
+                        case "13": Chapter1.learn3(); break;
+                        case "21": Chapter2.learn1(); break;
+                        case "22": Chapter2.learn2(); break;
+                        case "23": Chapter2.learn3(); break;
+                        case "24": Chapter2.learn4(); break;
+                        case "25": Chapter2.learn5(); break;
                         default:
                             System.err.println("Sorry, " + the + " is either yet to be implimented or invalid.");
                             break;

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Chapter2 extends mwgMethods {
     // private static Log log = LogFactory.getLog(Chapter2.class);
     // private static final Logger log = Logger.getLogger(Chapter2.class);
-    public static void learn21() {
+    public static void learn1() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int k;
         int j;
@@ -39,7 +39,7 @@ public class Chapter2 extends mwgMethods {
         // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(q = " + returnValue[0] + ", j = " + returnValue[1] + ")");
         return returnValue;
     }
-    public static void learn22() {
+    public static void learn2() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int a;
         int b;
@@ -66,7 +66,7 @@ public class Chapter2 extends mwgMethods {
         // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue = " + returnValue + ")");
         return returnValue;
     }
-    public static void learn23() {
+    public static void learn3() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int a;
         int b;
@@ -101,7 +101,7 @@ public class Chapter2 extends mwgMethods {
         // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         return returnValue;
     }
-    public static void learn24() {
+    public static void learn4() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int a;
         int b;
@@ -123,7 +123,7 @@ public class Chapter2 extends mwgMethods {
                 System.out.printf("\tSo, (%d x %d) + (%d x %d) = %d\n", a, theOutput[0], b, theOutput[1], c);
                 System.out.printf("\tThat is, (%d) + (%d) = %d\n", a * theOutput[0], b * theOutput[1], c);
                 System.out.println("Furthermore, all conceivable solutions for this equation take the form of:");
-                System.out.printf("\t(x, y) = ((%d + (t x %d)), (%d - (t x %d)))\nfor any integer, t.\n", theOutput[0], b / d, theOutput[1], a / d);
+                System.out.printf("\t(x, y) = (%d+%dt, %d-%dt)\nfor any integer, t.\n", theOutput[0], b / d, theOutput[1], a / d);
             }else{
                 System.out.println("It looks like, although the solution must exist, It's too complicated for me to find at my current skill level.");
             }
@@ -165,7 +165,7 @@ public class Chapter2 extends mwgMethods {
         // log.info("Out " + new Throwable().getStackTrace()[0].getMethodName() + "(returnValue.length = " + returnValue.length + ")");
         return returnValue;
     }
-    public static void learn25() {
+    public static void learn5() {
         // log.info("In " + new Throwable().getStackTrace()[0].getMethodName() + "()");
         int n;
         int[] theOutput;
